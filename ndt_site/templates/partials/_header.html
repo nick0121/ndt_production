@@ -1,8 +1,10 @@
+{% load static %}
+
 <header id="myHeader" class="head">
     <div class="fullscreen-wrap"></div>
         <div class="nav-container">
           <div class="brand">
-            <a href="#"><img src="img/logo_modified.png" alt=""></a>
+            <a href="#"><img src="{% static 'img/logo_modified.png' %}" alt=""></a>
           </div>
 
 
@@ -11,22 +13,22 @@
     
                 <ul class="nav-list">
                     <li>
-                    <a href="/dynamic_pages/towers.html">Towers</a>
+                    <a href="#featured-tower">Towers</a>
                     </li>
                     <li>
-                    <a href="#">Biminis</a>
+                    <a href="#biminis">Biminis</a>
                     </li>
                     <li>
-                    <a href="#">Accesories</a>
+                    <a href="#accessories">Accessories</a>
                     </li>
                     <li>
-                    <a href="#">About</a>
+                    <a href="{% url 'about' %}">About</a>
                     </li>
                     <li>
-                    <a href="#">Contact</a>
+                    <a href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li>
-                    <a href="#">Blog</a>
+                    <a href="{% url 'blog' %}">Blog</a>
                     </li>
                 </ul>
             </nav>

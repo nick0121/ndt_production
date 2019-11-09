@@ -9,6 +9,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 html {
   max-width: 100%;
   overflow-x: hidden;
@@ -22,7 +26,7 @@ body {
   color: #333;
   max-width: 100%;
   overflow: hidden;
-  background-color: #fdfffc;
+  background-color: #fff;
   position: relative;
   min-height: 100%;
   transition: .5s;
@@ -46,9 +50,13 @@ h1, h2 {
 .fullsize-background {
   width: 100%;
   height: 400px; 
-  background:linear-gradient(45deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../img/wake_splash.jpeg);
+  background:linear-gradient(45deg,rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url("/static/img/wake.jpeg");
   background-size: cover;
   z-index: -1;
+
+  -moz-box-shadow:0 5px 5px rgba(41, 39, 39, 0.75);
+  -webkit-box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
+  box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
 }
 
 .fullsize-background h1 {
@@ -116,21 +124,23 @@ h1, h2 {
   margin-bottom: -30px;
 }
 
-.grid-item button {
-  border: solid 2px #993300;
+.grid-item a {
+  display: inline-block;
+  border: solid 2px #D66706;
   border-radius: 2px;
-  width: 90%;
-  padding: 10px 25px;
+  width: 100%;
+  padding: 1rem 4rem;
   text-transform: uppercase;
   background-color: transparent;
   font-size: 1rem;
+  color: #D66706;
 }
 
-.grid-item button:hover {
-  background-color: #993300;
+.grid-item a:hover {
+  background-color: #D66706;
   color: #fff;
-  border-radius: 2px;
-  border: 2px solid #993300;
+  /* border-radius: 2px;
+  border: 2px solid #D66706; */
 }
 
 .grid-item p {
@@ -164,7 +174,7 @@ h1, h2 {
 .banner_stripe .left-stripe {
   width: 25%;
   height: 3px;
-  background-color: #474A48;
+  background-color: #0F4C5C;
   display: inline-block;
   margin-right: 5px;
 }
@@ -172,7 +182,7 @@ h1, h2 {
 .banner_stripe .right-stripe {
   width: 25%;
   height: 3px;
-  background-color: #474A48;
+  background-color: #0F4C5C;
   display: inline-block;
   margin-left: 5px;
 }
@@ -183,6 +193,7 @@ h1, h2 {
   height: auto;
   text-align: center;
   position: relative;
+  padding: 0;
 }
 
 .boat-logos {
@@ -202,7 +213,7 @@ h1, h2 {
 .boat-manufac h2 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 20px 20px;
 }
 
@@ -215,6 +226,22 @@ h1, h2 {
   width: 90%;
 }
 
+.wrap {
+  width: 100%;
+  padding: 2rem;
+  background:linear-gradient(45deg,rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url("/static/img/wakeboarding-sunset.jpeg");
+  background-size: cover;
+  z-index: -1;
+
+  -moz-box-shadow:0 5px 5px rgba(41, 39, 39, 0.75);
+  -webkit-box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
+  box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
+}
+
+.wrap h2 {
+  color: #fff;
+}
+
 
 /****************************************FEATURED TOWERS****************************************************/
 .featured-tower {
@@ -223,6 +250,7 @@ h1, h2 {
   margin-bottom: 50px;
   padding: 50px 0;
   position: relative;
+  background: #ebe5e5;
 }
 
 .featured-tower .title {
@@ -246,19 +274,21 @@ h1, h2 {
   width: 90%;
 }
 
-.featured-tower button {
+.featured-tower a {
+  display: inline-block;
+  color: #333;
   width: 80%;
   text-transform: uppercase;
   padding: 7px 25px;
-  border: 2px solid #993300;
+  border: 2px solid #D66706;
   border-radius: 2px;
   background-color: transparent;
 }
 
-.featured-tower button:hover {
-  background-color: #993300;
+.featured-tower a:hover {
+  background-color: #D66706;
   color: #fff;
-  border: 2px solid #993300;
+  border: 2px solid #D66706;
   border-radius: 2px;
 }
 
@@ -292,23 +322,27 @@ h1, h2 {
   text-align: left;
 }
 
+.featured-universal-tower ul li {
+  font-size: 1rem;
+}
+
 .featured-universal-tower img {
   width: 90%;
 }
 
-.featured-universal-tower button {
+.featured-universal-tower a {
   width: 80%;
   text-transform: uppercase;
   padding: 7px 25px;
-  border: 2px solid #993300;
+  border: 2px solid #D66706;
   border-radius: 2px;
   background-color: transparent;
 }
 
-.featured-universal-tower button:hover {
-  background-color: #993300;
+.featured-universal-tower a:hover {
+  background-color: #D66706;
   color: #fff;
-  border: 2px solid #993300;
+  border: 2px solid #D66706;
   border-radius: 2px;
 }
 
@@ -382,28 +416,28 @@ h1, h2 {
 }
 
 .accessories a {
-  text-decoration: none;
-  color: #fff;
+  display: inline-block;
+  color: #333;
 }
 
 .accessories a:hover {
-  color: #D74E09;
+  color: #D66706;
 }
 
-.accessories-wrapper button {
+.accessories-wrapper a {
   width: 80%;
   text-transform: uppercase;
   padding: 7px 25px;
-  border: 2px solid #D74E09;
+  border: 2px solid #D66706;
   border-radius: 2px;
   background-color: transparent;
   margin-top: 20px;
 }
 
-.accessories-wrapper button:hover {
-  background-color: #D74E09;
+.accessories-wrapper a:hover {
+  background-color: #D66706;
   color: #fff;
-  border: 2px solid #D74E09;
+  border: 2px solid #D66706;
   border-radius: 2px;
 }
 
@@ -416,7 +450,7 @@ h1, h2 {
 .call h2 {
   color: #fff;
   padding: 4rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .call a {
@@ -425,7 +459,7 @@ h1, h2 {
 }
 
 .call a:hover {
-  color: #D74E09;
+  color: #D66706;
 }
 
 /***************************************************FOOTER******************************************************************************/
@@ -452,7 +486,7 @@ footer ul.social li {
 }
 
 footer li:hover {
-  color: #993300;
+  color: #D66706;
   font-weight: bold;
 }
 
@@ -464,7 +498,7 @@ footer ul {
 }
 
 .sitemap ul li a:hover {
-  color: #993300;
+  color: #D66706;
   cursor: pointer;
 }
 
@@ -473,7 +507,7 @@ footer ul {
 }
 
 .address h6 a:hover {
-  color: #993300;
+  color: #D66706;
   cursor: pointer;
   list-style-type: none;
   text-decoration: none;
@@ -545,7 +579,7 @@ textarea {
 
 button {
   width: 100%;
-  background-color: #993300;
+  background-color: #D66706;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -555,7 +589,7 @@ button {
 }
 
 button:hover {
-  background-color: #6d2602;
+  background-color: #D66706;
 }
 
 .col-centered{
@@ -583,7 +617,7 @@ button:hover {
 .social li {
   display: inline;
   padding: 10px;
-  color: #993300;
+  color: #D66706;
 }
 
 .social li:hover {
@@ -603,8 +637,8 @@ article img {
   width: 90%
 }
 
-article button {
-  border: solid 2px #993300;
+article a {
+  border: solid 2px #D66706;
   border-radius: 2px;
   width: 80%;
   padding: 7px 25px;
@@ -617,11 +651,11 @@ article p {
   padding: 10px;
 }
 
-article button:hover {
-  background-color: #993300;
+article a:hover {
+  background-color: #D66706;
   color: #fff;
   border-radius: 2px;
-  border: 2px solid #993300;
+  border: 2px solid #D66706;
 }
 
 
@@ -637,20 +671,20 @@ input[type=text]:focus {
   outline: none;
 }
 
-.search-container button {
+.search-container a {
   padding: 6px 10px;
-  color: #993300;
+  color: #D66706;
   margin-top: 8px;
   background-color: transparent;
   font-size: 17px;
-  border: 3px solid #993300;
+  border: 3px solid #D66706;
   border-left: none;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
-.search-container button:hover {
-  background-color: #993300;
+.search-container a:hover {
+  background-color: #D66706;
   color: #fff;
 }
 
@@ -659,7 +693,7 @@ input[type=text]:focus {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
-  border: 3px solid #993300;
+  border: 3px solid #D66706;
   border-right: none;
   background-color: transparent;
   border-radius: 5px 0 0 5px;
@@ -734,7 +768,7 @@ input[type=text]:focus {
 }
 
 .custom-dropdown select {
-  background-color: #D74E09;
+  background-color: #D66706;
   color: #fff;
   font-size: inherit;
   padding: .5rem 4rem;
@@ -811,16 +845,16 @@ input[type=text]:focus {
 .button-stacked a {
   padding: 0.5rem 3rem;
   text-decoration: none;
-  color: #D74E09;
+  color: #D66706;
   font-weight: bold;
-  border: 2px solid #D74E09;
+  border: 2px solid #D66706;
   border-radius: 5px;
   text-transform: uppercase;
 }
 
 .button-stacked a:hover {
-  border: 2px solid #993300;
-  color: #993300;
+  border: 2px solid #D66706;
+  color: #D66706;
 }
 
 
@@ -846,7 +880,7 @@ input[type=text]:focus {
 .banner-links ul li:hover {
   text-decoration: none;
   list-style: none;
-  background: #D74E09;
+  background: #D66706;
 
 }
 
@@ -917,7 +951,7 @@ input[type=text]:focus {
 
 .box-items p {
   position: relative;
-  background-color: #D74E09;
+  background-color: #D66706;
   color: #fff;
   padding: 0.1rem 0.7rem;
   top: -74px;
@@ -932,9 +966,9 @@ input[type=text]:focus {
 }
 
 .butn a {
-  border: 2px solid #D74E09;
+  border: 2px solid #D66706;
   border-radius: 5px;
-  color: #D74E09;
+  color: #D66706;
   float: right;
   text-decoration: none;
   padding: 3px 5px;
@@ -943,7 +977,7 @@ input[type=text]:focus {
 }
 
 .butn a:hover {
-  color: #D74E09;
+  color: #D66706;
 }
 
 
@@ -991,7 +1025,7 @@ input[type=text]:focus {
     top: -75px;
   }
 
-  .grid-item button {
+  .grid-item a {
     width: 90%;
     padding: 15px 0;
     font-size: 1rem;
@@ -999,11 +1033,11 @@ input[type=text]:focus {
     color: #333;
   }
 
-  .grid-item button:hover {
-    background-color: #993300;
+  .grid-item a:hover {
+    background-color: #D66706;
     color: #fff;
     border-radius: 2px;
-    border: 2px solid #993300;
+    border: 2px solid #D66706;
   }
 
   .grid-item p {
@@ -1068,7 +1102,7 @@ input[type=text]:focus {
     padding: 5px;
   }
 
-  .featured-tower button {
+  .featured-tower a {
     width: 75%;
     padding: 15px 20px;
     font-size: 1.5rem;
@@ -1092,7 +1126,7 @@ input[type=text]:focus {
     padding: 5px;
   }
 
-  .featured-universal-tower button {
+  .featured-universal-tower a {
     width: 75%;
     padding: 15px 20px;
     font-size: 1.5rem;
@@ -1161,7 +1195,7 @@ input[type=text]:focus {
     text-transform: uppercase;
   }
 
-  .accessories-wrapper button {
+  .accessories-wrapper a {
     width: 75%;
     padding: 15px 20px;
     font-size: 1.5rem;
@@ -1263,12 +1297,12 @@ input[type=text]:focus {
   }
 
   /*featured items***********************************************/
-  .featured-tower button {
+  .featured-tower a {
     width: 60%;
   }
 
   /*featured items***********************************************/
-  .featured-universal-tower button {
+  .featured-universal-tower a {
     width: 60%;
   }
 
@@ -1291,7 +1325,7 @@ input[type=text]:focus {
   }
 
   /*Accessories content****************************************/
-  .accessories button {
+  .accessories a {
     width: 60%;
   }
 
@@ -1424,10 +1458,10 @@ input[type=text]:focus {
   }
 
   .featured-tower ul li {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
-  .featured-tower button {
+  .featured-tower a {
     width: 50%;
     margin-top: 50px;
   }
@@ -1446,7 +1480,7 @@ input[type=text]:focus {
     font-size: 1.3rem;
   }
 
-  .featured-universal-tower button {
+  .featured-universal-tower a {
     width: 50%;
     margin-top: 50px;
   }

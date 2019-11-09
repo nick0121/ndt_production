@@ -7,4 +7,24 @@ def index(request):
 
 def about(request):
     return render(request, "pages/about.html")
+
+
+def contact(request):
+    pass
+
+
+def accessories(request):
+    pass
+
+
+def towers(request):
+    pass
+
+
+def biminis(request):
+    pass
+
+
+def blog(request):
+    pass
     
