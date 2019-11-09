@@ -1,1 +1,1572 @@
+/*******************************************************************************************************************************************************************************************MAIN_STYLE_SHEET***************************************************************************************************************************************************************************************************************/
 
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #333;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #fdfffc;
+  position: relative;
+  min-height: 100%;
+  transition: .5s;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'Abel', sans-serif;
+}
+
+.spacer {
+  height: 200px;
+  width: 100%;
+}
+
+.spacer-small {
+  width: 100%;
+  height: 100px;
+}
+
+.fullsize-background {
+  width: 100%;
+  height: 400px; 
+  background:linear-gradient(45deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../img/wake_splash.jpeg);
+  background-size: cover;
+  z-index: -1;
+}
+
+.fullsize-background h1 {
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  padding-top: 85px;
+}
+
+/************header tile image of mastercraft***********/
+.header-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  position: relative;
+  top: -75px;
+  z-index: 5;
+}
+
+/**************************************SECTIONS STYLES**********************************************************************************/
+
+
+
+/***************************************************SHOWCASE****************************************************************************/
+.showcase {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-container {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: grid;
+}
+
+.grid-item {
+  margin-bottom: 50px;
+  padding: 5px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.grid-item h3 {
+  font-family: 'Abel', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  position: relative;
+  top: -75px;
+  margin-bottom: -30px;
+}
+
+.grid-item button {
+  border: solid 2px #993300;
+  border-radius: 2px;
+  width: 90%;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.grid-item button:hover {
+  background-color: #993300;
+  color: #fff;
+  border-radius: 2px;
+  border: 2px solid #993300;
+}
+
+.grid-item p {
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.showcase h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 10px 40px;
+}
+
+/********************************************BANNER WITH STRIPE AND IMAGE*************************************************/
+.banner_stripe {
+  width: 90%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner_stripe img {
+  width: 120px;
+  display: inline-block;
+}
+
+.banner_stripe .left-stripe {
+  width: 25%;
+  height: 3px;
+  background-color: #474A48;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.banner_stripe .right-stripe {
+  width: 25%;
+  height: 3px;
+  background-color: #474A48;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/********************************************boat manufacturers*************************************************/
+.boat-manufac {
+  margin-top: 50px;
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+
+.boat-logos {
+  width: 90%;
+  height: 100px;
+  background-color: lightgray;
+}
+
+.boat-manufac p {
+  padding: 5px 10px;
+}
+
+.boat-manufac p:nth-last-child(2) {
+  margin-bottom: 50px;
+}
+
+.boat-manufac h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  padding: 20px 20px;
+}
+
+.boat-manufac img {
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.boat-manufac .two-col-element img {
+  width: 90%;
+}
+
+
+/****************************************FEATURED TOWERS****************************************************/
+.featured-tower {
+  height: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 50px 0;
+  position: relative;
+}
+
+.featured-tower .title {
+  text-transform: uppercase;
+  font-family: 'Abel', sans-serif;
+}
+
+.featured-tower h2 {
+  text-transform: uppercase;
+  font-family: 'Abel', sans-serif;
+  padding: 10px 5px;
+}
+
+.featured-tower ul {
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: left;
+}
+
+.featured-tower img {
+  width: 90%;
+}
+
+.featured-tower button {
+  width: 80%;
+  text-transform: uppercase;
+  padding: 7px 25px;
+  border: 2px solid #993300;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.featured-tower button:hover {
+  background-color: #993300;
+  color: #fff;
+  border: 2px solid #993300;
+  border-radius: 2px;
+}
+
+.left-content {
+  padding: 0;
+}
+
+/**********************FEATURED UNIVERSAL TOWERS*****************************************************/
+.featured-universal-tower {
+  height: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.featured-universal-tower .title{
+  text-transform: uppercase;
+  font-family: 'Abel', sans-serif;
+}
+
+.featured-universal-tower h2 {
+  text-transform: uppercase;
+  font-family: 'Abel', sans-serif;
+  padding: 10px 5px;
+}
+
+.featured-universal-tower ul {
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: left;
+}
+
+.featured-universal-tower img {
+  width: 90%;
+}
+
+.featured-universal-tower button {
+  width: 80%;
+  text-transform: uppercase;
+  padding: 7px 25px;
+  border: 2px solid #993300;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.featured-universal-tower button:hover {
+  background-color: #993300;
+  color: #fff;
+  border: 2px solid #993300;
+  border-radius: 2px;
+}
+
+/***********************************FEATURED BIMINI TOPS*************************************/
+.biminis {
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+
+.biminis .row {
+  margin: 0;
+}
+
+.biminis .left-content {
+  padding-bottom: 50px;
+}
+
+.biminis ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.biminis img {
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+.biminis p {
+  padding: 10px;
+}
+
+.biminis h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: 'Abel', sans-serif;
+  padding: 0 20px;
+}
+
+/***********************************FEATURED ACCESSORIES******************************************/
+.accessories {
+  height: auto;
+  margin-top: 50px;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+}
+
+.right-content img {
+  width: 90%;
+}
+
+.accessories h2 {
+  font-family: 'Abel', sans-serif;
+  padding: 10px;
+}
+
+.accessories h3 {
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.accessories p {
+  padding: 10px;
+}
+
+.accessories ul {
+  display: inline-block;
+  text-align: left;
+}
+
+.accessories a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.accessories a:hover {
+  color: #D74E09;
+}
+
+.accessories-wrapper button {
+  width: 80%;
+  text-transform: uppercase;
+  padding: 7px 25px;
+  border: 2px solid #D74E09;
+  border-radius: 2px;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.accessories-wrapper button:hover {
+  background-color: #D74E09;
+  color: #fff;
+  border: 2px solid #D74E09;
+  border-radius: 2px;
+}
+
+.call {
+  background-color: #3F88C5;
+  width: 100%;
+  height: 250px;
+}
+
+.call h2 {
+  color: #fff;
+  padding: 4rem;
+  font-size: 3rem;
+}
+
+.call a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.call a:hover {
+  color: #D74E09;
+}
+
+/***************************************************FOOTER******************************************************************************/
+footer {
+  width: 100%;
+  background-color: #333;
+  height: 400px;
+  color: #fff;
+  padding: 10px;
+  overflow-x: hidden;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+footer ul.social {
+  text-decoration: none;
+  list-style: none;
+  padding: 5px 10px;
+}
+
+footer ul.social li {
+  display: inline;
+  padding: 0 10px;
+}
+
+footer li:hover {
+  color: #993300;
+  font-weight: bold;
+}
+
+footer ul {
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  padding: 5px;
+}
+
+.sitemap ul li a:hover {
+  color: #993300;
+  cursor: pointer;
+}
+
+.address h6 a {
+  color: #fff;
+}
+
+.address h6 a:hover {
+  color: #993300;
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/************************************************ Contact styles *****************************************************************************/
+
+.section-head {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.col-lg-5 {
+  padding: 0;
+}
+
+.row {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+  height: 500px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-lg-5 h4 {
+  font-family: 'Abel', sans-serif;
+  padding: 0 15px 0 15px;
+}
+
+.col-lg-5 h3 {
+  font-family: 'Abel', sans-serif;
+  padding: 0 20px 0 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: #993300;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6d2602;
+}
+
+.col-centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 100px;
+}
+
+.contact-info h2 {
+  margin-top: 50px;
+}
+
+.social {
+  text-decoration: none;
+  list-style: none;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+
+.social li {
+  display: inline;
+  padding: 10px;
+  color: #993300;
+}
+
+.social li:hover {
+  color: #6d2602;
+}
+
+/******************************************************** Article (Blog) styles *********************************************************************/
+.title {
+  margin: 0;
+}
+
+.month-year {
+  padding: 10px;
+}
+
+article img {
+  width: 90%
+}
+
+article button {
+  border: solid 2px #993300;
+  border-radius: 2px;
+  width: 80%;
+  padding: 7px 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+article p {
+  padding: 10px;
+}
+
+article button:hover {
+  background-color: #993300;
+  color: #fff;
+  border-radius: 2px;
+  border: 2px solid #993300;
+}
+
+
+/********************************************************* Styles for search bar *************************************************************/
+
+.wrap {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  color: #993300;
+  margin-top: 8px;
+  background-color: transparent;
+  font-size: 17px;
+  border: 3px solid #993300;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #993300;
+  color: #fff;
+}
+
+
+.searchTerm {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: 3px solid #993300;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 5px 0 0 5px;
+  margin-right: -5px;
+}
+
+/************************************** Tower styles **********************************************************************/
+.no-scroll {
+  overflow: hidden;
+}
+
+.jumbotron {
+  background-color: #fff;
+}
+
+.jumbotron img {
+  width: 80%;
+}
+
+.header-bg {
+  position: absolute;
+  background-image: url('../img/person-s-red-top-2723678.jpg');
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .5;
+  background-attachment: fixed;
+}
+
+.tower-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+.selection .selected {
+  margin-bottom: 2rem;
+}
+
+
+.jumbotron .col-md-6 p {
+  text-align: justify;
+}
+
+.jumbotron .col-md-6 img {
+  border-radius: 4px;
+}
+
+/**************************** Swiper styles ***************/
+
+.swiper-container {
+  margin: 0;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+}
+
+.swiper-image {
+  width: 100%;
+}
+
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3rem;
+}
+
+.custom-dropdown select {
+  background-color: #D74E09;
+  color: #fff;
+  font-size: inherit;
+  padding: .5rem 4rem;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /*Hiding the select arrow for firefox*/
+  -moz-appearance: none;
+  /*Hiding the select arrow for chrome*/
+  -webkit-appearance:none;
+  /*Hiding the select arrow default implementation*/
+  appearance: none;
+  outline: 0;
+
+}
+/*Hiding the select arrow for IE10*/
+.custom-dropdown select::-ms-expand {
+  display: none;
+}
+
+.custom-dropdown select:hover {
+  cursor: pointer;
+}
+
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,.2);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.6);
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.25);
+}
+
+.custom-dropdown select option {
+  border: 0;
+  outline: 0;
+}
+
+
+.selection-heading {
+  margin-bottom: 2rem;
+}
+
+
+.button-stacked a {
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  color: #D74E09;
+  font-weight: bold;
+  border: 2px solid #D74E09;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.button-stacked a:hover {
+  border: 2px solid #993300;
+  color: #993300;
+}
+
+
+.bottom-content {
+  float: right;
+}
+
+.bottom-content a {
+  text-decoration: none;
+}
+
+/* Banner links */
+
+.banner-links ul li {
+  text-decoration: none;
+  font-size: 1.3rem;
+  list-style: none;
+  color: #333;
+  display: inline;
+  padding: 0 20px;
+}
+
+.banner-links ul li:hover {
+  text-decoration: none;
+  list-style: none;
+  background: #D74E09;
+
+}
+
+.banner-links ul li a {
+  color: #333;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+
+.banner-links ul li a:hover {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.card-container {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/****************CHANGE TO GALLERY*******************************************/
+.card-container h2 {
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  width: 17rem;
+  margin: 10px;
+}
+
+.box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  
+}
+
+.card-img {
+  border-radius: 5px 5px 0 0;
+}
+
+.box-items {
+  width: 17rem;
+  height: 19rem;
+  margin: 20px;
+  
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+  -moz-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+  box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+}
+
+.box-items:hover {
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
+  box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
+}
+
+.box-items h4 {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.box-items p {
+  position: relative;
+  background-color: #D74E09;
+  color: #fff;
+  padding: 0.1rem 0.7rem;
+  top: -74px;
+  float: left;
+}
+
+
+.butn {
+  width: 100%;
+  /* border-top: #333 3px solid; */
+  padding: 5px;
+}
+
+.butn a {
+  border: 2px solid #D74E09;
+  border-radius: 5px;
+  color: #D74E09;
+  float: right;
+  text-decoration: none;
+  padding: 3px 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.butn a:hover {
+  color: #D74E09;
+}
+
+
+
+/*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************MEDIA_QUERIES*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+
+
+/*******************************RULES FOR SCREEN WIDTHS OF 475 PX OR GREATER************************************************************/
+@media screen and (min-width: 475px) {
+  .header-image img {
+    top: -100px;
+  }
+}
+
+/*******************************RULES FOR SCREEN WIDTHS OF 520 PX OR GREATER***************************************/
+@media screen and (min-width: 520px) {
+  .header-image img {
+    top: -150px;
+  }
+}
+
+/*******************************RULES FOR SCREEN WIDTHS OF 768 PX OR GREATER***************************************/
+@media screen and (min-width: 768px) {
+
+
+  /*Fullsize background********************************/
+  .fullsize-background {
+    height: 600px;;
+  }
+
+  .fullsize-background h1 {
+    font-size: 5rem;
+    padding: 20px;
+    padding-top: 100px;
+  }
+
+  /*Showcase cards*************************************/
+  .grid-item img {
+    width: 90%;
+    height: 175px;
+  }
+
+  .grid-item h3 {
+    font-size: 2.5rem;
+    top: -75px;
+  }
+
+  .grid-item button {
+    width: 90%;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .grid-item button:hover {
+    background-color: #993300;
+    color: #fff;
+    border-radius: 2px;
+    border: 2px solid #993300;
+  }
+
+  .grid-item p {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  .showcase h2 {
+    font-size: 3rem;
+  }
+
+  /*logo stripe*************************************/
+  .banner_stripe img {
+    width: 140px;
+  }
+
+  .banner_stripe .left-stripe {
+    width: 33%;
+    margin-right: 15px;
+  }
+
+  .banner_stripe .right-stripe {
+    width: 33%;
+    margin-left: 15px;
+  }
+
+  /*Boat manufacturers*******************************/
+  .boat-manufac h2 {
+    font-size: 3rem;
+    margin-bottom: 1.2em;
+  }
+
+  .boat-manufac p {
+    font-size: 1.4rem;
+    padding: 0 20px;
+    margin-bottom: 25px;
+  }
+
+  .boat-manufac img {
+    width: 90%;
+  }
+
+  .boat-manufac .text p {
+    font-size: 1.2rem;
+  }
+
+  .boat-manufac .two-col-element {
+    margin-top: 50px;
+  }
+
+  /*Featured towers********************************/
+  .featured-tower {
+    margin-top: 200px;
+  }
+
+  .featured-tower h2 {
+    font-size: 2rem;
+  }
+
+  .featured-tower li {
+    font-size: .8rem;
+    padding: 5px;
+  }
+
+  .featured-tower button {
+    width: 75%;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /*Featured universal towers**************************/
+  .featured-universal-tower {
+    margin-top: 100px;
+  }
+
+
+  .featured-universal-tower h2 {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+
+  .featured-universal-tower li {
+    font-size: .8rem;
+    padding: 5px;
+  }
+
+  .featured-universal-tower button {
+    width: 75%;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /*Biminis section******************************/
+  .biminis {
+    margin-top: 200px;
+  }
+
+
+  .logo-sunbrella img {
+    width: 50%;
+  }
+
+  .color-selection img {
+    width: 90%;
+  }
+
+  .biminis p {
+    font-size: .9rem;
+    padding: 10px 40px;
+  }
+
+  .biminis h2 {
+    font-size: 2.9rem;
+  }
+
+  .biminis li {
+    font-size: .8rem;
+    
+  }
+
+  .biminis h3 {
+    font-size: 2.2rem;
+  }
+
+  .biminis .left-content img {
+    width: 90%;
+  }
+
+  .biminis .left-content {
+    margin-top: 30px;
+  }
+
+  .text-wrapper h3 {
+    margin-top: 40px;
+  }
+
+  /*Options and accessories section******************/
+  .accessories-wrapper {
+    padding: 0px 15px;
+  }
+
+  .accessories .right-content img {
+    width: 90%;
+  }
+
+  .accessories h2 {
+    font-size: 2.5rem;
+  }
+
+  .accessories .options {
+    text-transform: uppercase;
+  }
+
+  .accessories-wrapper button {
+    width: 75%;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .accessories p {
+    font-size: 1.2rem;
+    padding: 20px 40px;
+  }
+
+  .accessories h3 {
+    font-size: 2.3rem;
+  }
+
+  .accessories li {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .accessories .featured-content {
+    margin-top: 50px;
+  }
+
+  .swiper-container {
+    width: 80%;
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .swiper-container img {
+    width: 80%;
+    height: auto;
+  }
+
+  /*Footer items*********************************/
+  footer {
+    height: 450px;
+    padding: 0 10px;
+  }
+
+  footer ul {
+    margin-bottom: 50px;
+  }
+
+  footer li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 1.4rem;
+  }
+
+  footer h6 {
+    font-size: 1.2rem;
+    padding: 5px 20px;
+  }
+
+  .social-links {
+    padding-top: 20px;
+  }
+}
+
+/******************************RULES FOR SCREEN WIDTHS OF 1024 OR GREATER*********************************************/
+@media screen and (min-width: 1024px) {
+  /*Fullsize background***************************************/
+  .fullsize-background {
+    height: 700px;
+  }
+
+  .fullsize-background h1 {
+    font-size: 5rem;
+    padding: 100px 40px 0 40px;
+  }
+
+  /*Header image section*********************************************/
+  .header-image img {
+    width: 75%;
+  }
+
+  /*Showcase items*********************************************/
+  .showcase h2 {
+    font-size: 3.8rem;
+    padding: 10px 40px;
+    color: #333;
+  }
+
+  /* .grid-item {
+    width: 80%;
+  } */
+
+  /*featured items***********************************************/
+  .boat-manufac .two-col-element {
+    margin-top: 100px;
+  }
+
+
+  .boat-manufac .two-col-element h2 {
+    font-size: 2rem;
+  }
+
+  /*featured items***********************************************/
+  .featured-tower button {
+    width: 60%;
+  }
+
+  /*featured items***********************************************/
+  .featured-universal-tower button {
+    width: 60%;
+  }
+
+  /*Bimini items***********************************************/
+  .color-selection img {
+    width: 90%;
+  }
+
+  .text-wrapper h3 {
+    margin-top: 40px;
+  }
+
+  .biminis .left-content img {
+    padding: 0 15px;
+  }
+
+  .biminis .left-content p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  /*Accessories content****************************************/
+  .accessories button {
+    width: 60%;
+  }
+
+}
+
+/******************************RULES FOR SCREEN WIDTHS OF 1224 OR GREATER*********************************************/
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/*Universal styles for body**********************/
+  section {
+    padding: 0 40px;
+  }
+
+  /*showcase section******************************/
+  .fullsize-background h1 {
+    padding-top: 125px;
+  }
+
+  .header-image img {
+    width: 80%;
+  }
+
+  /*showcase section******************************/
+  section.showcase {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .showcase h2 {
+    font-size: 3.8rem;
+    padding: 10px 40px;
+  }
+
+  .grid-item {
+    margin-bottom: 50px;
+    padding: 15px;
+  }
+
+  /*Featured tower**********************************/
+  .featured-tower {
+    padding: 50px 40px;
+  }
+
+  /*Boat manufac**********************************/
+  .logo-item img {
+    width: 60%;
+  }
+
+  /*Bimini section*********************************/
+  .biminis .logo-sunbrella img {
+    width: 35%;
+  }
+
+  /*Accessories section*********************************/
+  .accessories {
+    padding: 50px 40px;
+  }
+
+  .swiper-slide {
+    width: 90%;
+  }
+}
+
+
+
+
+/******************************RULES FOR SCREEN WIDTHS OF 1824 OR GREATER*********************************************/
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+
+
+  /*fullsize header*******************************/
+  .fullsize-background {
+    height: 100vh;
+  }
+
+
+  .fullsize-background h1 {
+    font-size: 6rem;
+    padding: 150px 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+
+  /*Header Img section******************************/
+  .header-image img {
+    width: 65%;
+    top: -350px;
+  }
+
+
+  /*Showcase section******************************/
+  section.showcase {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .grid-item {
+    margin-bottom: 50px;
+    padding: 25px;
+  }
+
+
+  /*Boat manufacturers section******************************/
+  .boat-manufac .text {
+    padding: 50px 150px;
+  }
+
+  .boat-manufac .text p {
+    font-size: 1.4rem;
+  }
+
+  .boat-manufac .two-col-element h2 {
+    font-size: 3rem;
+  }
+
+  /*Featured tower section******************************/
+  .featured-tower img {
+    width: 75%;
+  }
+
+  .featured-tower h2 {
+    font-size: 3rem;
+  }
+
+  .featured-tower ul li {
+    font-size: 1.3rem;
+  }
+
+  .featured-tower button {
+    width: 50%;
+    margin-top: 50px;
+  }
+
+
+  /*featured universal tower section******************************/
+  .featured-universal-tower img {
+    width: 75%;
+  }
+
+  .featured-universal-tower h2 {
+    font-size: 3rem;
+  }
+
+  .featured-universal-tower ul li {
+    font-size: 1.3rem;
+  }
+
+  .featured-universal-tower button {
+    width: 50%;
+    margin-top: 50px;
+  }
+
+  /*Biminis section******************************/
+  .biminis .logo-sunbrella {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .biminis .logo-sunbrella img {
+    width: 30%;
+  }
+
+  .biminis .logo-sunbrella p {
+    font-size: 1.4rem;
+  }
+
+  .biminis .left-content {
+    margin-top: 100px;
+  }
+
+  .biminis .left-content img {
+    width: 70%;
+  }
+
+  .biminis .left-content p {
+    font-size: 1.5rem;
+    margin-right: 100px;
+  }
+
+  .biminis .right-content {
+    margin-top: 100px;
+  }
+
+  .biminis .right-content h2 {
+    font-size: 4rem;
+  }
+
+  .biminis .right-content ul li {
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+
+  .biminis .right-content img {
+    width: 70%;
+  }
+
+  /*Accessories section******************************/
+  .accessories {
+    margin-top: 200px;
+  }
+
+  .accessories .accessories-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accessories h2 {
+    font-size: 3rem;
+  }
+
+  .accessories p {
+    font-size: 1.5rem;
+  }
+
+  .accessories .accessories-wrapper .container-fluid {
+    margin-top: 100px;
+  }
+
+  .accessories .left-content h2 {
+    font-size: 3rem;
+    text-align: justify;
+  }
+
+  .accessories .left-content ul li {
+    font-size: 1.4rem;
+  }
+
+  .accessories .left-content img {
+    width: 80%;
+  }
+
+  .accessories .accessories-wrapper .featured {
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accessories .accessories-wrapper .featured h3 {
+    font-size: 3rem;
+  }
+
+  .swiper-wrapper img {
+    width: 60%;
+  }
+
+  /*Footer section******************************/
+}
+
+
+  /******************************RULES FOR SCREEN WIDTHS OF 2560 OR GREATER*********************************************/
+/*  Xtra Large screens ----------- */
+@media only screen  and (min-width : 2480px) {
+/* Styles */
+
+  /*fullsize header*******************************/
+  .fullsize-background h1 {
+    font-size: 6rem;
+    padding: 60px 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+
+  /*showcase section******************************/
+  .header-image img {
+    width: 50%;
+  }
+}
