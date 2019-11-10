@@ -10,21 +10,14 @@ def about(request):
 
 
 def contact(request):
-    pass
+    return render(request, 'pages/contact.html')
 
 
 def accessories(request):
-    pass
-
-
-def towers(request):
-    pass
+    return render(request, 'pages/accessories.html')
 
 
 def biminis(request):
-    pass
+    return render(request, 'pages/biminis.html')
 
-
-def blog(request):
-    pass
     
