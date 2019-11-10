@@ -1,1 +1,187 @@
-<h1>towers</h1>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main>
+    <!--------------------------------------STATIC CONTENT ---------------------------------------------------------------->
+    <!-- <div class="spacer"></div> -->
+    <div class="header-bg"></div>
+    <h1 class="tower-title">NDT Premium Wakeboard Towers <br> Made in the usa</h1>
+
+    <div class="spacer"></div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <p>Select your boat manufacturer from the dropdown</p>
+            <div class="custom-dropdown">
+                <select name="" id="boats">
+                    <option value="0">Mastercraft</option>
+                    <option value="1">Moomba</option>
+                    <option value="2">Supra</option>
+                    <option value="3">Natique</option>
+                    <option value="4">Bayliner</option>
+                    <option value="5">Sea Ray</option>
+                    <option value="6">Crownline</option>
+                    <option value="7">Caravelle</option>
+                    <option value="8">Tige</option>
+                    <option value="9">Yamaha</option>
+                    <option value="10">Seadoo</option>
+                </select>
+            </div>
+            
+            <!--Boat name from selection load placeholder-->
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- <img src="/img/mastercraft-tower.jpg" alt=""> -->
+        <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="">
+                    </div>
+                
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="boat-title">Mastercraft tower</h3>
+                    <p class="boat-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquid nemo, illo nulla dicta ut, dolore molestiae, vero fugiat error nostrum magnam voluptate ipsam placeat tempore deserunt delectus? Vel assumenda soluta maiores aliquid quam placeat consequuntur, nesciunt facere. Quo repellendus ea voluptatibus, unde natus quos suscipit eligendi quibusdam cumque quidem?</p>
+                    <ul class="boat-features">
+                        <li>100% made in America</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="spacer-small"></div>
+            <div class="button-stacked">
+                <a href="#!">Select your boat</a>
+            </div>
+
+            
+            <a href="{% url 'installation' %}"><p class="bottom-content">Installation guide | <span><a href="{% url 'faq' %}">FAQ</a></span></p></a>
+            <!--Boat brand name dynamically loaded-->
+            
+        </div>
+
+        <div class="spacer-small"></div>
+
+        <!--selection banner with links-->
+        <div class="banner-links">
+            <ul>
+                <li><a href="#!">Biminis</a></li>
+                <li><a href="#!">tower accessories</a></li>
+                <li><a href="#!">Reviews</a></li>
+                <li><a href="#!">Contact</a></li>
+                <li><a href="#!">Tech support</a></li>
+            </ul>
+        </div>
+
+        <div class="spacer-small"></div>
+
+        <!--Boat gallery-->
+        <div class="card-container">
+            <h2>Select your boat</h2>
+
+            <div class="box">
+                <!---------Card------------->
+
+
+
+                <div class="box-items">
+                    <img class="card-img" src="{% static 'img/1987-1990_Prostar_190.jpg' %}" alt="">
+                    <h4>1987-1990 Prostar 190</h4>
+                    <p>$2295.00</p>
+                    <div class="butn">
+                        <a href="#!">
+                            Add to order
+                        </a>
+                    </div>
+
+                </div>
+                <div class="box-items">
+                    <img class="card-img" src="{% static 'img/1988-1991_Tristar_190.jpg' %}" alt="">
+                    <h4>1988-1991 Tristar 190</h4>
+                    <p>$2295.00</p>
+                    <div class="butn">
+                        <a href="#!">
+                            Add to order
+                        </a>
+                    </div>
+
+                </div>
+                <div class="box-items">
+                    <img class="card-img" src="{% static 'img/1991-1994_Prostar_190.jpg' %}" alt="">
+                    <h4>1991-1994 Prostar 190</h4>
+                    <p>$2295.00</p>
+                    <div class="butn">
+                        <a href="#!">
+                            Add to order
+                        </a>
+                    </div>
+
+                </div>
+                <div class="box-items">
+                    <img class="card-img" src="{% static 'img/1995-1997_Prostar_190.jpg' %}" alt="">
+                    <h4>1995-1997 Prostar 190</h4>
+                    <p>$2295.00</p>
+                    <div class="butn">
+                        <a href="#!">
+                            Add to order
+                        </a>
+                    </div>
+
+                </div>
+                <div class="box-items">
+                    <img class="card-img" src="{% static 'img/2001-2005_Prostar_209.jpg' %}" alt="">
+                    <h4>2001-2005 Prostar 209</h4>
+                    <p>$2295.00</p>
+                    <div class="butn">
+                        <a href="#!">
+                            Add to order
+                        </a>
+                    </div>
+
+                </div>
+                <div class="box-items">
+                    <img class="card-img" src="{% static 'img/1990-1992_Maristar_210OB.jpg' %}" alt="">
+                    <h4>1990-1992 Maristar 210OB</h4>
+                    <p>$2295.00</p>
+                    <div class="butn">
+                        <a href="#!">
+                            Add to order
+                        </a>
+                    </div>
+
+                </div>
+                <div class="box-items">
+                    <img class="card-img" src="{% static 'img/1992-1995_Prostar_205.jpg' %}" alt="">
+                    <h4>1992-1995 Prostar 205</h4>
+                    <p>$2295.00</p>
+                    <div class="butn">
+                        <a href="#!">
+                            Add to order
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+</main>
+{% endblock %}

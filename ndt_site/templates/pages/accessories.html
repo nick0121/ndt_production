@@ -1,5 +1,110 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
-<h1 style="padding-top: 150px">accessories</h1>
+    <!------------------------Content for Accessories page--------------------------------->
+<main>
+
+    <div class="main-description">
+        <h2>NDT Accessories & parts</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestiae, recusandae rerum ipsa molestias quibusdam cupiditate. Aliquam, excepturi! Recusandae, nostrum quia harum deleniti, perspiciatis porro laborum facere cum quasi doloribus ex commodi ab corporis fuga at ipsum, iure earum voluptas tempora voluptates iusto alias! Quo alias voluptate dolores unde dicta!</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, ducimus molestiae? Suscipit reiciendis soluta maiores, ea aspernatur corporis doloremque officiis.</p>
+    </div>
+
+    <!-- Highlighted content -->
+    <div class="highlighted container">
+        <h2>Accessories</h2>
+        <div class="row">
+            <div class="grid-item col-sm col-lg-4">
+                <img class="highlighted" src="{% static 'img/bimini_cat.jpg' %}" alt="">
+                <p>Biminis</p>
+            </div>
+            <div class="grid-item col-sm col-lg-4">
+                <img class="highlighted" src="{% static 'img/racks.jpg' %}" alt="">
+                <p>Racks</p>
+            </div>
+            <div class="grid-item col-sm col-lg-4">
+                <img class="highlighted" src="{% static 'img/clothing_cat.jpg' %}" alt="">
+                <p>Parts & Gear</p>
+            </div>
+        </div>
+    </div>
+
+    <!----------------Cards------------------->
+
+    
+    <div class="card-container">
+        <h2>Parts & Gear</h2>
+
+        <div class="box">
+            <!---------Card------------->
+            <div class="box-items">
+                <img class="card-img" src="{% static 'img/hangtyte.jpg' %}" alt="">
+                <h4>Ski Tow</h4>
+                <p>$5.99</p>
+                <div class="butn">
+                    <a href="#!">
+                        buy now
+                    </a>
+                </div>
+            </div>
+            <div class="box-items">
+                <img class="card-img" src="{% static 'img/hangtyte.jpg' %}" alt="">
+                <h4>Ski Tow</h4>
+                <p>$5.99</p>
+                <div class="butn">
+                    <a href="#!">
+                        buy now
+                    </a>
+                </div>
+            </div>
+            <div class="box-items">
+                <img class="card-img" src="{% static 'img/hangtyte.jpg' %}" alt="">
+                <h4>Ski Tow</h4>
+                <p>$5.99</p>
+                <div class="butn">
+                    <a href="#!">
+                        buy now
+                    </a>
+                </div>
+            </div>
+            <div class="box-items">
+                <img class="card-img" src="{% static 'img/hangtyte.jpg' %}" alt="">
+                <h4>Ski Tow</h4>
+                <p>$5.99</p>
+                <div class="butn">
+                    <a href="#!">
+                        buy now
+                    </a>
+                </div>
+            </div>
+            <div class="box-items">
+                <img class="card-img" src="{% static 'img/hangtyte.jpg' %}" alt="">
+                <h4>Ski Tow</h4>
+                <p>$5.99</p>
+                <div class="butn">
+                    <a href="#!">
+                        buy now
+                    </a>
+                </div>
+            </div>
+            <div class="box-items">
+                <img class="card-img" src="{% static 'img/hangtyte.jpg' %}" alt="">
+                <h4>Ski Tow</h4>
+                <p>$5.99</p>
+                <div class="butn">
+                    <a href="#!">
+                        buy now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+</main>
 {% endblock %}

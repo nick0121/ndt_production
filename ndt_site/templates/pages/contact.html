@@ -1,5 +1,71 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
-<h1 style="padding-top: 150px">contact</h1>
+<!------------------------Content for contact page--------------------------------->
+<main>
+<!--------------Heading title--------------------------->
+    <div class="main-title">
+        <h1>Contact us today</h1>
+    </div>
+
+<!----------------Image---------------------------------->
+    <div class="header-image">
+        <img src="{% static 'img/header_image.jpg' %}" alt="">
+    </div>
+
+    <!-- contact details -->
+    <h3><strong>New Dimension Towers</strong></h3>
+    <h4>555 topside rd.<br>Friendsville, Tn 37742</h4> 
+
+
+    <h2>Check us out on social</h2>
+    <div class="social-links">
+        <ul class="social">
+            <li><i class="fab fa-facebook-square fa-3x"></i></li>
+            <li><i class="fab fa-twitter-square fa-3x"></i></li>
+            <li><i class="fab fa-instagram fa-3x"></i></li>
+            <li><i class="fab fa-google-plus-square fa-3x"></i></li>
+        </ul>
+    </div>
+
+    <!-----------------contact Information------------------->
+    <section class="contact-info">
+
+        <h2 class="section-head">Contact us</h2>
+            <!-- <p class="section-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et provident animi necessitatibus consectetur quo, amet unde perspiciatis minima consequatur aliquid.</p> -->
+
+        <div class="row">
+
+            <div class="col-lg-5 col-centered">
+                <!------------------google map------------------------->
+                <section class="map">
+                    <div id="map"></div>
+                </section>
+            </div>
+            <div class="col-lg-5 col-centered">
+                <!-- form -->
+                <form action="">
+
+                    <h3>contact form</h3>
+                    <h4>leave us a message and someone will contact you soon</h4>
+
+                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                    
+                    <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                    
+                    <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                    
+                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+</main>
 {% endblock %}

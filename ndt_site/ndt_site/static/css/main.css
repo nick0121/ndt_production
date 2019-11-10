@@ -517,6 +517,11 @@ footer ul {
   text-decoration: none;
 }
 
+/*************accessories ***************/
+.main-description {
+  padding-top: 200px;
+}
+
 /************************************************ Contact styles *****************************************************************************/
 
 .section-head {
@@ -719,7 +724,7 @@ input[type=text]:focus {
 
 .header-bg {
   position: absolute;
-  background-image: url('../img/person-s-red-top-2723678.jpg');
+  background-image: url('/static/img/person-s-red-top-2723678.jpg');
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -732,7 +737,7 @@ input[type=text]:focus {
 .tower-title {
   font-size: 4rem;
   text-transform: uppercase;
-  padding-top: 50px;
+  padding-top: 200px;
 }
 
 .selection .selected {
@@ -907,7 +912,7 @@ input[type=text]:focus {
   border-radius: 5px;
 }
 
-/****************CHANGE TO GALLERY*******************************************/
+/**************** CARD *******************************************/
 .card-container h2 {
   text-transform: uppercase;
   padding: 1rem;
@@ -924,15 +929,18 @@ input[type=text]:focus {
   flex-flow: row wrap;
   justify-content: center;
   
+  
 }
 
 .card-img {
+  width: 100%;
   border-radius: 5px 5px 0 0;
 }
 
 .box-items {
   width: 17rem;
-  height: 19rem;
+  /* height: 19rem; */
+  height: auto;
   margin: 20px;
   
   background-color: #fff;
@@ -955,6 +963,7 @@ input[type=text]:focus {
 
 .box-items p {
   position: relative;
+  margin: 0;
   background-color: #D66706;
   color: #fff;
   padding: 0.1rem 0.7rem;
@@ -962,27 +971,30 @@ input[type=text]:focus {
   float: left;
 }
 
-
 .butn {
   width: 100%;
-  /* border-top: #333 3px solid; */
-  padding: 5px;
+  position: relative;
+  bottom: 0;
 }
 
 .butn a {
-  border: 2px solid #D66706;
-  border-radius: 5px;
-  color: #D66706;
-  float: right;
+  display: inline-block;
+  width: 100%;
+  background-color: #D66706;
+  border-radius: 0 0 5px 5px;
+  color: #fff;
   text-decoration: none;
-  padding: 3px 5px;
+  padding: 10px;
   font-size: 0.9rem;
   font-weight: bold;
+  opacity: 0.7;
 }
 
 .butn a:hover {
-  color: #D66706;
+  opacity: 1;
 }
+
+/*****************NEW CARD *******************/
 
 
 

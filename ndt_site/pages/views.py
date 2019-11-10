@@ -20,4 +20,12 @@ def accessories(request):
 def biminis(request):
     return render(request, 'pages/biminis.html')
 
+
+def installation(request):
+    return render(request, 'pages/installation.html')
+
+
+def faq(request):
+    return render(request, 'pages/faq.html')
+
     
