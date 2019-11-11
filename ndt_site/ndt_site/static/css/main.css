@@ -11,10 +11,10 @@ a {
 
 a:hover {
   text-decoration: none;
-  -webkit-transition: background-color 1s ease-out;
-  -moz-transition: background-color 1s ease-out;
-  -o-transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
 }
 
 html {
@@ -724,6 +724,7 @@ input[type=text]:focus {
 
 .jumbotron img {
   width: 80%;
+  height: auto;
 }
 
 .header-bg {
@@ -739,9 +740,9 @@ input[type=text]:focus {
 }
 
 .tower-title {
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  padding-top: 200px;
+  padding: 200px 20px 0 20px;
 }
 
 .selection .selected {
@@ -760,7 +761,6 @@ input[type=text]:focus {
 /**************************** Swiper styles ***************/
 
 .swiper-container {
-  margin: 0;
   width: 100%;
 }
 
@@ -769,7 +769,15 @@ input[type=text]:focus {
 }
 
 .swiper-image {
-  width: 100%;
+  width: 90%;
+}
+
+.boat-title {
+  margin-top: 2rem;
+}
+
+.boat-features {
+  margin-bottom: 2rem;
 }
 
 
@@ -854,6 +862,9 @@ input[type=text]:focus {
   margin-bottom: 2rem;
 }
 
+.button-stacked {
+  padding-bottom: 1rem;
+}
 
 .button-stacked a {
   padding: 0.5rem 3rem;
@@ -877,39 +888,31 @@ input[type=text]:focus {
 
 .bottom-content a {
   text-decoration: none;
+  
 }
 
-/* Banner links */
+.banner-links {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.banner-links ul {
+  padding: 0;
+}
 
 .banner-links ul li {
   text-decoration: none;
-  font-size: 1.3rem;
   list-style: none;
-  color: #333;
-  display: inline;
-  padding: 0 20px;
-}
-
-.banner-links ul li:hover {
-  text-decoration: none;
-  list-style: none;
-  background: #D66706;
-
+  
 }
 
 .banner-links ul li a {
   color: #333;
-  line-height: 2rem;
+  padding: 5px;
+  display: inline-block;
+  font-size: 1.2rem;
   text-transform: capitalize;
 }
-
-
-.banner-links ul li a:hover {
-  list-style: none;
-  text-decoration: none;
-  color: #fff;
-}
-
 
 .card-container {
   background-color: #fff;
@@ -922,28 +925,19 @@ input[type=text]:focus {
   padding: 1rem;
 }
 
-.card {
-  background-color: #fff;
-  width: 17rem;
-  margin: 10px;
-}
-
 .box {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  
-  
 }
 
-.card-img {
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-}
+
+
+
+
 
 .box-items {
   width: 17rem;
-  /* height: 19rem; */
   height: auto;
   margin: 20px;
   
@@ -958,6 +952,11 @@ input[type=text]:focus {
   -webkit-box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
   -moz-box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
   box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .box-items h4 {
@@ -998,8 +997,60 @@ input[type=text]:focus {
   opacity: 1;
 }
 
-/*****************NEW CARD *******************/
 
+
+/*****************NEW CARD *******************/
+.card {
+  width: 17rem;
+  -webkit-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
+  -moz-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
+  box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
+}
+
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  margin: 0;
+}
+
+.card-tag {
+  text-align: left;
+  padding: 0 10px;
+  color: #9B9FB5;
+}
+
+.card-bottom {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #9B9FB5;
+  padding: 10px;
+}
+
+.card-price {
+  display: inline;
+  font-weight: bold;
+  color: #D66706;
+  margin-right: 8.5rem;
+}
+
+.card-bottom .card-icon {
+  float: right;
+}
+
+.card-icon i {
+  color: #9B9FB5;
+}
 
 
 /*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************MEDIA_QUERIES*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -1241,16 +1292,6 @@ input[type=text]:focus {
     margin-top: 50px;
   }
 
-  .swiper-container {
-    width: 80%;
-    height: 100%;
-    margin-top: 50px;
-  }
-
-  .swiper-container img {
-    width: 80%;
-    height: auto;
-  }
 
   /*Footer items*********************************/
   footer {
@@ -1275,6 +1316,45 @@ input[type=text]:focus {
 
   .social-links {
     padding-top: 20px;
+  }
+
+  /* Banner links */
+  .banner-links {
+    background-color: transparent;
+  }
+
+  .banner-links ul li {
+    text-decoration: none;
+    font-size: 1.3rem;
+    list-style: none;
+    color: #333;
+    display: inline;
+    padding: 0 10px;
+  }
+
+  .banner-links ul li:hover {
+    text-decoration: none;
+    list-style: none;
+    background: #D66706;
+
+  }
+
+  .banner-links ul li a {
+    color: #333;
+    line-height: 2rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+  }
+
+
+  .banner-links ul li a:hover {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .tower-title {
+    font-size: 4rem;
   }
 }
 
@@ -1301,10 +1381,6 @@ input[type=text]:focus {
     padding: 10px 40px;
     color: #333;
   }
-
-  /* .grid-item {
-    width: 80%;
-  } */
 
   /*featured items***********************************************/
   .boat-manufac .two-col-element {
@@ -1352,6 +1428,17 @@ input[type=text]:focus {
   .call h2 {
     font-size: 4rem;
   }
+
+
+  /* Banner links */
+  .banner-links {
+    background-color: transparent;
+  }
+
+  .banner-links ul li {
+    padding: 0 20px;
+  }
+
 
 
 }
@@ -1411,8 +1498,8 @@ input[type=text]:focus {
     padding: 50px 40px;
   }
 
-  .swiper-slide {
-    width: 90%;
+  .tower-title {
+    font-size: 5rem;
   }
 }
 
@@ -1602,9 +1689,7 @@ input[type=text]:focus {
     font-size: 3rem;
   }
 
-  .swiper-wrapper img {
-    width: 60%;
-  }
+
 
   /*Footer section******************************/
 }
