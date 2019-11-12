@@ -527,6 +527,16 @@ footer ul {
 }
 
 /************************************************ Contact styles *****************************************************************************/
+/* .main-title {
+  width: 100%;
+  height: 75vh;
+}
+
+.main-title h1 {
+  color: #333;
+  z-index: 1000;
+  font-size: 4rem;
+} */
 
 .section-head {
   margin-bottom: 50px;
@@ -561,6 +571,7 @@ form {
 .col-lg-5 h4 {
   font-family: 'Abel', sans-serif;
   padding: 0 15px 0 15px;
+  font-size: 1.2rem;
 }
 
 .col-lg-5 h3 {
@@ -592,21 +603,24 @@ textarea {
 
 button {
   width: 100%;
-  background-color: #D66706;
-  color: white;
+  border: 2px solid #D66706;
+  color: #D66706;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
   background-color: #D66706;
+  color: white;
 }
 
 .col-centered{
   display: block;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -614,10 +628,16 @@ button:hover {
 
 .contact-info {
   margin-bottom: 100px;
+  background:linear-gradient(45deg,rgba(0,0,0,0.2),rgba(0,0,0,0.4)),url("/static/img/water.jpeg");
+  padding-bottom: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contact-info h2 {
-  margin-top: 50px;
+  margin: 50px 0;
+  color: #fff;
+  padding-top: 50px;
 }
 
 .social {
@@ -949,73 +969,6 @@ input[type=text]:focus {
   flex-flow: row wrap;
   justify-content: center;
 }
-
-
-
-
-
-
-/* .box-items {
-  width: 17rem;
-  height: auto;
-  margin: 20px;
-  
-  background-color: #fff;
-  border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
-  -moz-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
-  box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
-}
-
-.box-items:hover {
-  -webkit-box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
-  -moz-box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
-  box-shadow: 3px 3px 10px 0px rgba(51,51,51,0.75);
-}
-
-.card-img {
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-}
-
-.box-items h4 {
-  font-size: 1.2rem;
-  padding: 0.5rem;
-}
-
-.box-items p {
-  position: relative;
-  margin: 0;
-  background-color: #D66706;
-  color: #fff;
-  padding: 0.1rem 0.7rem;
-  top: -74px;
-  float: left;
-}
-
-.butn {
-  width: 100%;
-  position: relative;
-  bottom: 0;
-}
-
-.butn a {
-  display: inline-block;
-  width: 100%;
-  background-color: #D66706;
-  border-radius: 0 0 5px 5px;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  opacity: 0.7;
-}
-
-.butn a:hover {
-  opacity: 1;
-} */
-
 
 
 /*****************NEW CARD *******************/
@@ -1365,6 +1318,8 @@ input[type=text]:focus {
   .boat-title {
     margin-top: 0;
   }
+
+
 }
 
 /******************************RULES FOR SCREEN WIDTHS OF 1024 OR GREATER*********************************************/
@@ -1448,7 +1403,13 @@ input[type=text]:focus {
     padding: 0 20px;
   }
 
+  form {
+    margin: 0;
+  }
 
+  .col-centered {
+    width: 100%;
+  }
 
 }
 
