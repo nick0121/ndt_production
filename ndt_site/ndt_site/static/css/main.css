@@ -758,10 +758,21 @@ input[type=text]:focus {
   border-radius: 4px;
 }
 
+.row .col-md-6:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 /**************************** Swiper styles ***************/
 
 .swiper-container {
   width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .swiper-slide {
@@ -769,7 +780,15 @@ input[type=text]:focus {
 }
 
 .swiper-image {
-  width: 90%;
+  width: 100%;
+}
+
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23D66706'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23D66706'%2F%3E%3C%2Fsvg%3E") !important;
 }
 
 .boat-title {
@@ -877,8 +896,8 @@ input[type=text]:focus {
 }
 
 .button-stacked a:hover {
-  border: 2px solid #D66706;
-  color: #D66706;
+  background-color: #D66706;
+  color: #fff;
 }
 
 
@@ -936,7 +955,7 @@ input[type=text]:focus {
 
 
 
-.box-items {
+/* .box-items {
   width: 17rem;
   height: auto;
   margin: 20px;
@@ -995,16 +1014,24 @@ input[type=text]:focus {
 
 .butn a:hover {
   opacity: 1;
-}
+} */
 
 
 
 /*****************NEW CARD *******************/
 .card {
+  border: none;
   width: 17rem;
   -webkit-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
   -moz-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
   box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
+  margin: 20px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+  -moz-box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
+  box-shadow: 2px 2px 10px 0px rgba(51,51,51,0.75);
 }
 
 
@@ -1012,6 +1039,7 @@ input[type=text]:focus {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: .25rem .25rem 0 0;
 }
 
 .card-title {
@@ -1181,29 +1209,6 @@ input[type=text]:focus {
     color: #333;
   }
 
-  /*Featured universal towers**************************/
-  .featured-universal-tower {
-    margin-top: 100px;
-  }
-
-
-  .featured-universal-tower h2 {
-    font-size: 2rem;
-    padding: 0 20px;
-  }
-
-  .featured-universal-tower li {
-    font-size: .8rem;
-    padding: 5px;
-  }
-
-  .featured-universal-tower a {
-    width: 75%;
-    padding: 15px 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
 
   /*Biminis section******************************/
   .biminis {
@@ -1355,6 +1360,10 @@ input[type=text]:focus {
 
   .tower-title {
     font-size: 4rem;
+  }
+
+  .boat-title {
+    margin-top: 0;
   }
 }
 
