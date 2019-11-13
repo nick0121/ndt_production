@@ -1128,25 +1128,93 @@ input[type=text]:focus {
 }
 
 /**************** About page styles *******************/
+#about {
+  background-color: #f4f4f4;
+}
+
+.top-container {
+  width: 100%;
+  height: 50vh;
+  background-color: #3F88C5;
+}
+
+.top-container h1 {
+  padding-top: 150px;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.top-container h6 {
+  color: #fff;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #3F88C5;
+  transform: rotate(45deg);
+  position: relative;
+  top: -25px;
+}
+
+.square-bottom {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f4f4;
+  transform: rotate(45deg);
+  position: relative;
+  top: 25px;
+}
+
+.square-review {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #DFEEEE;
+  transform: rotate(45deg);
+  top: -25px;
+}
+
+
 .shop-pictures img {
   width: 100%;
   margin-bottom: 10px;
 }
 
-.main-img {
-  width: 80%;
-  margin: 50px 0 100px 0;
+
+.reviews-container {
+  width: 100%;
+  height: 450px;
+  background-color: #DFEEEE;
+}
+
+.reviews-container h3 {
+  padding-top: 100px;
+}
+
+.reviews-container p {
+  max-width: 798px;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bottom-container {
-  background-color: #f4f4f4;
+  background-color: #fff;
   width: 100%;
-  height: 400px;
-  margin-top: 50px;
+  height: 450px;
+  
 }
 
 .bottom-container h2 {
-  
+  padding-top: 40px;
 }
 
 .about-text {
@@ -1155,10 +1223,10 @@ input[type=text]:focus {
   text-align: justify;
 }
 
-.container h1 {
-  text-transform: uppercase;
-  font-size: 2.5rem;
+.about-text h3 {
+  font-size: 1.6rem;
 }
+
 
 
 /*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************MEDIA_QUERIES*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
