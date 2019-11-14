@@ -4,32 +4,37 @@
 {% block content %}
     <!------------------------Content for Biminis page--------------------------------->
 <Main>
-    <div class="spacer"></div>
+
     <div class="heading">
         <h2>Biminis</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi velit accusantium nemo, quos, saepe mollitia molestias sed fuga recusandae iure odio. Asperiores ipsa quam, quos, saepe ipsam molestiae delectus pariatur unde dolores earum quia illo nesciunt. Beatae praesentium accusamus minima eaque repellendus quo voluptatem ad, fugit tempore sint hic molestiae!</p>
+        <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
     </div>
 
-    <div class="container">
-        <div class="row justify-content-left">
-            <div class="first col-12 col-md-8">
-                <img src="{% static 'img/bimini.jpg' %}" alt="">
+    <div class="bimini-gallery">
+        <h3>Highest quality biminis on the market</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, repudiandae.</p>
+        <div class="img-container">
+            <div class="img-card">
+                <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
+                <p>heavy duty stainless fittings</p>
             </div>
-            <div class="second col-12 col-md-4">
-                <img src="{% static 'img/bimini.jpg' %}" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, explicabo corporis. Omnis atque iusto est neque consequuntur perferendis error vitae.</p>
+            <div class="img-card">
+                <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>
-        <div class="row justify-content-left">
-            <div class="third col-12 col-md-6">
-                <img src="{% static 'img/bimini.jpg' %}" alt="">
+            <div class="img-card">
+                <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
-            <div class="fourth col-12 col-md-6">
-                <img src="{% static 'img/bimini.jpg' %}" alt="">
-            </div>
+
         </div>
     </div>
+    <!-- section -->
+    <div class="bimini-bottom">
+        
+    </div>
 
-    
+
 </Main>
 {% endblock %}
