@@ -11,6 +11,9 @@ class Products(models.Model):
     price = models.IntegerField()
     comments = models.TextField()
 
+    def __str__(self):
+        return self.productName
+
 
 class OrderProducts(models.Model):
     orderId = models.ForeignKey(Products, on_delete=models.CASCADE)
@@ -19,11 +22,15 @@ class OrderProducts(models.Model):
     comments = models.TextField()
 
 
+
 class Orders(models.Model):
     orderId = models.AutoField(primary_key=True)
     customerId = models.ForeignKey(Customers, on_delete=models.CASCADE)
     dateOrdered = models.DateTimeField()
     comments = models.TextField()
+
+    def __str__(self):
+        return self.orderId
 
 
 class Shipping(models.Model):
@@ -62,3 +69,6 @@ class Dealers(models.Model):
     phone = models.IntegerField()
     contactName = models.CharField(max_length=20)
     has__ordered = models.BooleanField()
+
+    def __str__(self):
+        return self.dealerName
