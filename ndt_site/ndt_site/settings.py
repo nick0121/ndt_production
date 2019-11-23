@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'ndt_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'ndt_test',
         'USER': 'postgres',
         'PASSWORD': 'Amelia8627!',
         'HOST': 'localhost',

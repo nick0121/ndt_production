@@ -1,33 +1,52 @@
 from django.db import models
 from towers.models import Towers
 
+
 # Create your models here.
 class Products(models.Model):
     productId = models.AutoField(primary_key=True)
     towerId = models.ForeignKey(Towers, on_delete=models.CASCADE)
-    productName = models.CharField(max_length=100)
-    description = models.TextField()
-    units = models.IntegerField()
-    price = models.IntegerField()
-    comments = models.TextField()
+    productName = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    units = models.IntegerField(default=0)
+    price = models.IntegerField(default=0)
+    comments = models.TextField(blank=True)
 
     def __str__(self):
         return self.productName
 
 
 class OrderProducts(models.Model):
-    orderId = models.ForeignKey(Products, on_delete=models.CASCADE)
     productId = models.ForeignKey(Products, on_delete=models.CASCADE)
-    qtyEach = models.IntegerField()
-    comments = models.TextField()
+    qtyEach = models.IntegerField(default=0)
+    comments = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.orderId
+
+
+
+class Customers(models.Model):
+    CustomerId = models.AutoField(primary_key=True)
+    firstName = models.CharField(max_length=255)
+    lastName = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255)
+    address = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    state = models.CharField(max_length=255)
+    zipCode = models.CharField(max_length=255)
+    message = models.TextField(blank=True)
+    review = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.CustomerId
 
 
 class Orders(models.Model):
     orderId = models.AutoField(primary_key=True)
     customerId = models.ForeignKey(Customers, on_delete=models.CASCADE)
     dateOrdered = models.DateTimeField()
-    comments = models.TextField()
+    comments = models.TextField(blank=True)
 
     def __str__(self):
         return self.orderId
@@ -37,38 +56,32 @@ class Shipping(models.Model):
     shippingId = models.AutoField(primary_key=True)
     orderId = models.ForeignKey(Orders, on_delete=models.CASCADE)
     dateOrdered = models.DateTimeField()
-    comments = models.TextField()
+    comments = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.shippingId
 
-class Customers(models.Model):
-    CustomerId = models.AutoField(primary_key=True)
-    firstName = models.CharField(max_length=100)
-    lastName = models.CharField(max_length=100)
-    email = models.EmailField()
-    address = models.CharField(max_length=100)
-    city = models.CharField(max_length=20)
-    state = models.CharField(max_length=20)
-    zipCode = models.CharField(max_length=10)
-    message = models.TextField()
-    review = models.TextField()
 
 
 class PhoneNumbers(models.Model):
     customerId = models.ForeignKey(Customers, on_delete=models.CASCADE)
-    primaryNumber = models.IntegerField()
-    secondaryNumber = models.IntegerField()
+    primaryNumber = models.IntegerField(default=0)
+    secondaryNumber = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return self.customerId
 
 ## Dealers class
 class Dealers(models.Model):
     dealerId = models.AutoField(primary_key=True)
-    dealerName = models.CharField(max_length=20)
-    dealerClass = models.CharField(max_length=20)
-    city = models.CharField(max_length=20)
-    state = models.CharField(max_length=20)
-    zipCode = models.CharField(max_length=20)
-    phone = models.IntegerField()
-    contactName = models.CharField(max_length=20)
-    has__ordered = models.BooleanField()
+    dealerName = models.CharField(max_length=255)
+    dealerClass = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    state = models.CharField(max_length=255)
+    zipCode = models.CharField(max_length=255)
+    phone = models.IntegerField(default=0)
+    contactName = models.CharField(max_length=255)
+    has_ordered = models.BooleanField(default=False)
 
     def __str__(self):
         return self.dealerName

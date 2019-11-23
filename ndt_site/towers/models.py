@@ -9,14 +9,16 @@ class Towers(models.Model):
         ('P', 'Polished'),
     )
 
-    towerId = models.AutoField(primary_key=True)
-    productId = models.ForeignKey(Product, on_delete=models.CASCADE)
-    boatName = models.CharField(max_length=20)
-    boatModel = models.CharField(max_length=20)
-    style = models.CharField(max_length=20)
-    finish = models.CharField(max_length=2, choices=FINISHES)
-    price = models.IntegerField()
+    # towerId = models.AutoField(primary_key=True)
+    boatName = models.CharField(max_length=100, default="mastercraft")
+    boatModel = models.CharField(max_length=100, default="prostar")
+    style = models.CharField(max_length=100, default="fullsize")
+    finish = models.CharField(max_length=100, choices=FINISHES, default=FINISHES[0])
+    price = models.IntegerField(default=0)
     description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.towerId
 
 
 class Biminis(models.Model):
@@ -31,8 +33,11 @@ class Biminis(models.Model):
 
     biminiId = models.AutoField(primary_key=True)
     towerId = models.ForeignKey(Towers, on_delete=models.CASCADE)
-    color = models.CharField(max_length=2, choices=COLORS)
+    color = models.CharField(max_length=100, choices=COLORS)
     price = models.IntegerField()
+
+    def __str__(self):
+        return self.biminiId
 
 
 class Images(models.Model):
@@ -43,11 +48,14 @@ class Images(models.Model):
     collapsed = models.ImageField()
     back = models.ImageField()
 
+    def __str__(self):
+        return self.imageId
+
 
 class ModelYear(models.Model):
     modelId = models.AutoField(primary_key=True)
     towerId = models.ForeignKey(Towers, on_delete=models.CASCADE)
-    m__year = models.IntegerField()
+    m_year = models.IntegerField()
 
 
 
