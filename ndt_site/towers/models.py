@@ -9,12 +9,16 @@ class Towers(models.Model):
         ('P', 'Polished'),
     )
 
-    boatName = models.CharField(max_length=100)
+    boatName = models.CharField(max_length=200)
     boatModel = models.CharField(max_length=100)
     style = models.CharField(max_length=100, default="fullsize")
     finish = models.CharField(max_length=100, choices=FINISHES, default=FINISHES[0])
     price = models.IntegerField(default=0)
     description = models.TextField(blank=True)
+    main_image = models.ImageField(blank=True)
+    angled_Image = models.ImageField(blank=True)
+    back_image = models.ImageField(blank=True)
+    collapsed_image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.boatName
@@ -37,17 +41,6 @@ class Biminis(models.Model):
     def __str__(self):
         return self.towerId
 
-
-class Images(models.Model):
-
-    towerId = models.ForeignKey(Towers, on_delete=models.CASCADE)
-    profile = models.ImageField()
-    angled = models.ImageField()
-    collapsed = models.ImageField()
-    back = models.ImageField()
-
-    def __str__(self):
-        return self.imageId
 
 
 class ModelYear(models.Model):
