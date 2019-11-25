@@ -1,5 +1,5 @@
 from django.db import models
-from towers.models import Towers
+from towers.models import Towers, TowerOrder
 
 
 # Create your models here.
