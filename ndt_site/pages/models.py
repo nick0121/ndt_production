@@ -1,45 +1,74 @@
 from django.db import models
 from towers.models import Towers, TowerOrder
+from localflavor.us.models import USStateField
 
-
-# Create your models here.
-class Products(models.Model):
-    productId = models.AutoField(primary_key=True)
-    towerId = models.ForeignKey(Towers, on_delete=models.CASCADE)
-    productName = models.CharField(max_length=255)
-    description = models.TextField(blank=True)
-    units = models.IntegerField(default=0)
-    price = models.IntegerField(default=0)
-    comments = models.TextField(blank=True)
-
-    def __str__(self):
-        return self.productName
-
-
-class OrderProducts(models.Model):
-    productId = models.ForeignKey(Products, on_delete=models.CASCADE)
-    qtyEach = models.IntegerField(default=0)
-    comments = models.TextField(blank=True)
-
-    def __str__(self):
-        return self.orderId
 
 
 
 class Customers(models.Model):
-    CustomerId = models.AutoField(primary_key=True)
-    firstName = models.CharField(max_length=255)
-    lastName = models.CharField(max_length=255)
-    email = models.EmailField(max_length=255)
-    address = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
-    state = models.CharField(max_length=255)
-    zipCode = models.CharField(max_length=255)
-    message = models.TextField(blank=True)
+
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    email = models.EmailField(max_length=50)
+    address = models.CharField(max_length=50)
+    city = models.CharField(max_length=20)
+    state = models.USStateField(_('state'), default=None)
+    zipCode = models.CharField(max_length=20)
     review = models.TextField(blank=True)
 
     def __str__(self):
-        return self.CustomerId
+        return self.last_name
+
+
+
+## Dealers class
+class Dealers(models.Model):
+    
+    name = models.CharField(max_length=30)
+    address = models.CharField(max_length=100)
+    city = models.CharField(_('city'), max_length=50)
+    state = models.USStateField(_('state'), default=None)
+    zipCode = models.CharField(max_length=50)
+    contactName = models.CharField(max_length=30)
+    has_ordered = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
+
+
+
+class PhoneNumbers(models.Model):
+
+    customer = models.ForeignKey(Customers, on_delete=models.CASCADE)
+    dealer = models.ForeignKey(Dealers, on_delete=models.CASCADE)
+    primaryNumber = models.IntegerField(default=0)
+    secondaryNumber = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return self.customerId
+
+
+# Create your models here.
+class Products(models.Model):
+
+    name = models.CharField(max_length=30)
+    description = models.TextField(blank=True)
+    price = models.DecimalField(max_length=7, max_digits=2)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name
+
+
+class OrderProducts(models.Model):
+
+    productId = models.ForeignKey(Products, on_delete=models.CASCADE)
+    qty = models.IntegerField(default=1)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.productId
+
 
 
 class Orders(models.Model):
@@ -61,27 +90,3 @@ class Shipping(models.Model):
     def __str__(self):
         return self.shippingId
 
-
-
-class PhoneNumbers(models.Model):
-    customerId = models.ForeignKey(Customers, on_delete=models.CASCADE)
-    primaryNumber = models.IntegerField(default=0)
-    secondaryNumber = models.IntegerField(blank=True)
-
-    def __str__(self):
-        return self.customerId
-
-## Dealers class
-class Dealers(models.Model):
-    dealerId = models.AutoField(primary_key=True)
-    dealerName = models.CharField(max_length=255)
-    dealerClass = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
-    state = models.CharField(max_length=255)
-    zipCode = models.CharField(max_length=255)
-    phone = models.IntegerField(default=0)
-    contactName = models.CharField(max_length=255)
-    has_ordered = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.dealerName
