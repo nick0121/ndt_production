@@ -1,4 +1,6 @@
 from django.db import models
+import datetime
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 MANUFACTURERS = (
     ('1', 'Mastercraft'),
@@ -26,13 +28,23 @@ IMAGES = (
 )
 
 
+def current_year():
+    return datetime.date.today().year
+
+
+def max_value_current_year(value):
+    return MaxValueValidator(current_year())(value)
+
+
 # Create your models here.
 class Towers(models.Model):
 
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
     manufacturer = models.PositiveIntegerField(choices=MANUFACTURERS, default=None)
+    start_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
+    end_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
     model = models.CharField(max_length=20)
-    price = models.DecimalField(max_length=7, max_digits=2)
+    price = models.DecimalField(max_length=7, max_digits=2, decimal_places=2)
     description = models.TextField(blank=True)
 
 
@@ -52,13 +64,13 @@ class TowerOrder(models.Model):
         ('POLISHED', 'Polished'),
     )
 
-    towerId = models.ForeignKey(Towers, on_delete=models.CASCADE)
+    tower = models.ForeignKey(Towers, on_delete=models.CASCADE)
     qty = models.IntegerField(default=1)
     style = models.CharField(max_length=2, choices=(('FL', 'Fullsize'), ('MN', 'Mini')), default='Fullsize')
     finish = models.CharField(max_length=20, choices=FINISHES, default=BRUSHED)
 
     def __str__(self):
-        return self.towerId
+        return self.tower
 
 
 class Biminis(models.Model):
@@ -95,11 +107,11 @@ class BiminiOrder(models.Model):
         ('PG', 'Persian Green'),
     )
 
-    BiminiId = models.ForeignKey(Biminis, on_delete=models.CASCADE)
+    bimini = models.ForeignKey(Biminis, on_delete=models.CASCADE)
     color = models.CharField(max_length=20, choices=COLORS, default=COLORS[0])
     qty = models.IntegerField(default=1)
 
-    def __str__(self);
+    def __str__(self):
         return self.BiminiId
 
 
@@ -119,3 +131,4 @@ class BiminiImages(models.Model):
     description = models.TextField(blank=True)
     manufacturer = models.PositiveIntegerField(choices=MANUFACTURERS, default=None)
     orientation = models.PositiveSmallIntegerField(choices=IMAGES, default=1)
+
