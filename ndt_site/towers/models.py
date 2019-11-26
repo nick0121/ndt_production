@@ -51,6 +51,9 @@ class Towers(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name_plural = "Towers"
+
 
 
 class TowerOrder(models.Model):
@@ -72,6 +75,10 @@ class TowerOrder(models.Model):
     def __str__(self):
         return self.tower
 
+    
+    class Meta:
+        verbose_name_plural = "TowerOrders"
+
 
 class Biminis(models.Model):
 
@@ -81,6 +88,10 @@ class Biminis(models.Model):
 
     def __str__(self):
         return self.name
+
+
+    class Meta:
+        verbose_name_plural = "Biminis"
 
 
 class BiminiOrder(models.Model):
@@ -115,6 +126,9 @@ class BiminiOrder(models.Model):
         return self.BiminiId
 
 
+    class Meta:
+        verbose_name_plural = "BiminiOrders"
+
 
 class Images(models.Model):
 
@@ -122,8 +136,14 @@ class Images(models.Model):
     description = models.TextField(blank=True)
     manufacturer = models.PositiveIntegerField(choices=MANUFACTURERS, default=None)
     orientation = models.PositiveSmallIntegerField(choices=IMAGES, default=1)
+    image = models.ImageField()
+
+    def __str__(self):
+        return self.name
 
 
+    class Meta:
+        verbose_name_plural = "Images"
 
 class BiminiImages(models.Model):
 
@@ -131,4 +151,11 @@ class BiminiImages(models.Model):
     description = models.TextField(blank=True)
     manufacturer = models.PositiveIntegerField(choices=MANUFACTURERS, default=None)
     orientation = models.PositiveSmallIntegerField(choices=IMAGES, default=1)
+    image = models.ImageField()
 
+    def __str__(self):
+        return self.name
+
+
+    class Meta:
+        verbose_name_plural = "BiminiImages"

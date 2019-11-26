@@ -16,6 +16,7 @@ six = "==1.13.0"
 sqlparse = "==0.3.0"
 Django = "==2.2.7"
 Pillow = "==6.2.1"
+django-phone-field = "*"
 
 [requires]
 python_version = "3.7"

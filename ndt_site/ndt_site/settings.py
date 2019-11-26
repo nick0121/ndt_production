@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'ndt_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ndt_test',
+        'NAME': 'ndt_db',
         'USER': 'postgres',
         'PASSWORD': 'Amelia8627!',
         'HOST': 'localhost',
@@ -126,6 +126,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+#Countries module settings
+COUNTRIES_FIRST =  [
+    'US',
+    'GB',
+]
+
 
 
 # Static files (CSS, JavaScript, Images)
