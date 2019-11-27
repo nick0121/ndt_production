@@ -1,7 +1,8 @@
 from django.db import models
 from django_countries.fields import CountryField
 from localflavor.us.us_states import STATE_CHOICES
-from ndt_site.towers.models import MANUFACTURERS, TowerOrder, BiminiOrder
+from phone_field import PhoneField
+from towers.models import MANUFACTURERS, TowerOrder, BiminiOrder
 
 
 
@@ -42,14 +43,19 @@ class Dealers(models.Model):
 
 # ADDRESS CLASS
 class Address(models.Model):
+
+    ''' Phone Number Format
+        +[country code][number]x[extension]
+        +12223334444x55 '''
+
     customer = models.ForeignKey(Customers, on_delete=models.CASCADE, blank=True, null=True)
     dealer = models.ForeignKey(Dealers, on_delete=models.CASCADE, blank=True, null=True)
     address1 = models.CharField(max_length=50)
     address2 = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=20)
     zipCode = models.CharField("Zip/Postal Code", max_length=20)
-    phone = models.PositiveIntegerField(blank=False) ############################################## FIX PHONE FIELD ###############
-    secondary_phone = models.PositiveIntegerField(blank=False)
+    phone = PhoneField(blank=True, help_text='Contact phone number') 
+    secondary_phone = PhoneField(blank=True, help_text='Secondary phone number') 
     country = CountryField(blank_label='(select country)')
     date_created = models.DateTimeField(auto_now=True)
 
