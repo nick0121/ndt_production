@@ -3,29 +3,23 @@ import datetime
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 MANUFACTURERS = (
-    ('1', 'Mastercraft'),
-    ('2', 'Moomba'),
-    ('3', 'Stingray'),
-    ('4', 'Cobalt'),
-    ('5', 'Bryant'),
-    ('6', 'Four Winns'),
-    ('7', 'Sea Doo'),
-    ('8', 'Malibu'),
-    ('9', 'Bayliner'),
-    ('10', 'Startcraft'),
-    ('11', 'Centurion'),
-    ('12', 'Tige'),
-    ('13', 'Nautique'),
-    ('14', 'Yamaha'),
-    ('15', 'Supra'),
+    ('mastercraft', 'Mastercraft'),
+    ('moomba', 'Moomba'),
+    ('stingray', 'Stingray'),
+    ('cobalt', 'Cobalt'),
+    ('bryant', 'Bryant'),
+    ('four winns', 'Four Winns'),
+    ('sea doo', 'Sea Doo'),
+    ('malibu', 'Malibu'),
+    ('bayliner', 'Bayliner'),
+    ('starcraft', 'Startcraft'),
+    ('centurion', 'Centurion'),
+    ('tige', 'Tige'),
+    ('nautique', 'Nautique'),
+    ('yamaha', 'Yamaha'),
+    ('supra', 'Supra'),
 )
 
-IMAGES = (
-    ('1', 'Main'),
-    ('2', 'Angled'),
-    ('3', 'Back'),
-    ('4', 'Collapsed'),
-)
 
 
 def current_year():
@@ -40,11 +34,11 @@ def max_value_current_year(value):
 class Towers(models.Model):
 
     title = models.CharField(max_length=200, unique=True)
-    manufacturer = models.PositiveIntegerField(choices=MANUFACTURERS, default=None)
+    manufacturer = models.CharField(choices=MANUFACTURERS, default=None, max_length=50)
     start_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
     end_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
     model = models.CharField(max_length=20)
-    price = models.DecimalField(max_length=7, max_digits=2, decimal_places=2)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField(blank=True)
 
 
@@ -67,13 +61,14 @@ class TowerOrder(models.Model):
         ('POLISHED', 'Polished'),
     )
 
+    name = models.CharField(max_length=100)
     tower = models.ForeignKey(Towers, on_delete=models.CASCADE)
     qty = models.IntegerField(default=1)
     style = models.CharField(max_length=2, choices=(('FL', 'Fullsize'), ('MN', 'Mini')), default='Fullsize')
     finish = models.CharField(max_length=20, choices=FINISHES, default=BRUSHED)
 
     def __str__(self):
-        return self.tower
+        return self.name
 
     
     class Meta:
@@ -82,8 +77,9 @@ class TowerOrder(models.Model):
 
 class Biminis(models.Model):
 
-    name = models.ForeignKey(Towers, on_delete=models.CASCADE)
-    price = models.DecimalField(max_digits=7, decimal_places=2)
+    name = models.CharField(max_length=100)
+    tower = models.ForeignKey(Towers, on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField(blank=True)
 
     def __str__(self):
@@ -118,12 +114,13 @@ class BiminiOrder(models.Model):
         ('PG', 'Persian Green'),
     )
 
+    name = models.CharField(max_length=100)
     bimini = models.ForeignKey(Biminis, on_delete=models.CASCADE)
     color = models.CharField(max_length=20, choices=COLORS, default=COLORS[0])
     qty = models.IntegerField(default=1)
 
     def __str__(self):
-        return self.BiminiId
+        return self.name
 
 
     class Meta:
@@ -132,11 +129,15 @@ class BiminiOrder(models.Model):
 
 class Images(models.Model):
 
-    name = models.ForeignKey(Towers, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    tower = models.ForeignKey(Towers, on_delete=models.CASCADE, blank=True, null=True, default=None)
+    bimini = models.ForeignKey(Biminis, on_delete=models.CASCADE, blank=True, null=True, default=None)
     description = models.TextField(blank=True)
-    manufacturer = models.PositiveIntegerField(choices=MANUFACTURERS, default=None)
-    orientation = models.PositiveSmallIntegerField(choices=IMAGES, default=1)
-    image = models.ImageField()
+    manufacturer = models.CharField(choices=MANUFACTURERS, default=None, max_length=50)
+    main = models.ImageField(blank=True, null=True)
+    angled = models.ImageField(blank=True, null=True)
+    back = models.ImageField(blank=True, null=True)
+    collapsed = models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -145,17 +146,3 @@ class Images(models.Model):
     class Meta:
         verbose_name_plural = "Images"
 
-class BiminiImages(models.Model):
-
-    name = models.ForeignKey(Biminis, on_delete=models.CASCADE)
-    description = models.TextField(blank=True)
-    manufacturer = models.PositiveIntegerField(choices=MANUFACTURERS, default=None)
-    orientation = models.PositiveSmallIntegerField(choices=IMAGES, default=1)
-    image = models.ImageField()
-
-    def __str__(self):
-        return self.name
-
-
-    class Meta:
-        verbose_name_plural = "BiminiImages"
