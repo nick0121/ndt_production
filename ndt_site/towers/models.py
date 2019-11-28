@@ -41,7 +41,7 @@ class Towers(models.Model):
     end_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
     model = models.CharField(max_length=20)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    description = models.TextField(blank=True)
+    description = models.TextField(blank=True) ############################ MAKE REQUIRED ###########################################
 
 
     def __str__(self):

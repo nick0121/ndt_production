@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+
+{% load humanize %}
+
 {% load static %}
 
 
@@ -15,8 +18,10 @@
         <div class="jumbotron">
             <p>Select your boat manufacturer from the dropdown</p>
             <div class="custom-dropdown">
+                
                 <select name="" id="boats">
                     <option value="0">Mastercraft</option>
+
                     <option value="1">Moomba</option>
                     <option value="2">Supra</option>
                     <option value="3">Natique</option>
@@ -96,86 +101,26 @@
             <h2>Select your boat</h2>
 
             <div class="box">
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
+
+                {% if towers %}
+                    {% for tower in towers %}
+                        <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
+                        <div class="card">
+                            <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
+                            <h3 class="card-title">{{tower.title}}</h3>
+                            <p class="card-tag">{{ tower.description }}</p>
+                            <div class="card-bottom">
+                                <p class="card-price">${{ tower.price | intcomma }}</p>
+                                <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="col-md-12">
+                        <p>No towers available</p>
                     </div>
-                </div>
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
-                    </div>
-                </div>
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
-                    </div>
-                </div>
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
-                    </div>
-                </div>
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
-                    </div>
-                </div>
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
-                    </div>
-                </div>
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
-                    </div>
-                </div>
-                <!---------Card------------->
-                <div class="card">
-                    <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="" class="card-image">
-                    <h3 class="card-title">00-01 Prostar 195</h3>
-                    <p class="card-tag">Fullsize</p>
-                    <div class="card-bottom">
-                        <p class="card-price">$2295.00</p>
-                        <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
-                    </div>
-                </div>
+                {% endif %}
+
 
             </div>
 
