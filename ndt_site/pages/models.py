@@ -2,7 +2,7 @@ from django.db import models
 from django_countries.fields import CountryField
 from localflavor.us.us_states import STATE_CHOICES
 from phone_field import PhoneField
-from towers.models import MANUFACTURERS, TowerOrder, BiminiOrder
+from towers.models import MANUFACTURERS
 
 
 
@@ -12,7 +12,7 @@ class Customers(models.Model):
 
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    email = models.EmailField(max_length=50)
+    email = models.EmailField(max_length=50, unique=True)
     review = models.TextField(blank=True)
 
     def __str__(self):
@@ -54,7 +54,7 @@ class Address(models.Model):
     address2 = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=20)
     zipCode = models.CharField("Zip/Postal Code", max_length=20)
-    phone = PhoneField(blank=True, help_text='Contact phone number') 
+    phone = PhoneField(help_text='Contact phone number') 
     secondary_phone = PhoneField(blank=True, help_text='Secondary phone number') 
     country = CountryField(blank_label='(select country)')
     date_created = models.DateTimeField(auto_now=True)
@@ -73,12 +73,12 @@ class Address(models.Model):
 class Products(models.Model):
 
     name = models.CharField(max_length=30)
-    price = models.DecimalField(max_length=7, max_digits=2, decimal_places=2)
-    image = models.ImageField()
+
+    price = models.DecimalField(max_digits=7, decimal_places=2)
     weight = models.DecimalField(max_digits=7, decimal_places=2)
     description = models.TextField(blank=True)
     sale = models.BooleanField(default=False)
-    sale_price = models.DecimalField(max_digits=7, decimal_places=2, blank=True)
+    sale_price = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -110,9 +110,10 @@ class OrderDetails(models.Model):
     name = models.CharField(max_length=100)
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
     order = models.ForeignKey(Orders, on_delete=models.CASCADE)
-    tower = models.ForeignKey(TowerOrder, on_delete=models.CASCADE, null=True, blank=True)
-    bimini = models.ForeignKey(BiminiOrder, on_delete=models.CASCADE, null=True, blank=True)
+    tower = models.ForeignKey('towers.TowerOrder', on_delete=models.CASCADE, null=True, blank=True)
+    bimini = models.ForeignKey('towers.BiminiOrder', on_delete=models.CASCADE, null=True, blank=True)
     qty = models.IntegerField(default=1)
+    total_price = models.DecimalField(max_digits=7, decimal_places=2)
     description = models.TextField(blank=True)
 
     def __str__(self):

@@ -2,7 +2,9 @@ from django.db import models
 import datetime
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+
 MANUFACTURERS = (
+    ('none', 'None'),
     ('mastercraft', 'Mastercraft'),
     ('moomba', 'Moomba'),
     ('stingray', 'Stingray'),
@@ -129,18 +131,23 @@ class BiminiOrder(models.Model):
 
 class Images(models.Model):
 
-    name = models.CharField(max_length=100)
+    ORIENTATIONS = (
+        ('main', 'Main'),
+        ('angled', 'Angled'),
+        ('back', 'Back'),
+        ('collapsed', 'Collapsed'),
+    )
+
+    title = models.CharField(max_length=100)
     tower = models.ForeignKey(Towers, on_delete=models.CASCADE, blank=True, null=True, default=None)
-    bimini = models.ForeignKey(Biminis, on_delete=models.CASCADE, blank=True, null=True, default=None)
+    product = models.ForeignKey('pages.Products', on_delete=models.CASCADE, blank=True, null=True, default=None)
     description = models.TextField(blank=True)
     manufacturer = models.CharField(choices=MANUFACTURERS, default=None, max_length=50)
-    main = models.ImageField(blank=True, null=True)
-    angled = models.ImageField(blank=True, null=True)
-    back = models.ImageField(blank=True, null=True)
-    collapsed = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='photos/')
+    orientation = models.CharField(max_length=20, blank=True, default=None, choices=ORIENTATIONS)
 
     def __str__(self):
-        return self.name
+        return self.title
 
 
     class Meta:

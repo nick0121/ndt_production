@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'phone_field'
 ]
 
 MIDDLEWARE = [
@@ -145,6 +146,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'ndt_site/static')
 ]
+
+#Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 try:
     from .local_settings import *
