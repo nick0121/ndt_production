@@ -16,7 +16,7 @@ class Customers(models.Model):
     review = models.TextField(blank=True)
 
     def __str__(self):
-        return '{} {}'.format(self.first_name, self.last_name)
+        return f'{self.first_name} {self.last_name}'
 
 
     class Meta:
@@ -139,3 +139,15 @@ class Shipping(models.Model):
 
     class Meta:
         verbose_name = "Shipping"
+
+
+class Contact(models.Model):
+    fullName = models.CharField(max_length=255)
+    email = models.EmailField(max_length=50)
+    phone = PhoneField()
+    message = models.TextField()
+    date_created = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return self.fullName

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Products, Orders, Customers, Dealers, Address, Shipping, OrderDetails
+from .models import Products, Orders, Customers, Dealers, Address, Shipping, OrderDetails, Contact
 # Register your models here.
 
 
@@ -34,6 +34,12 @@ class OrderDetailsAdmin(admin.ModelAdmin):
     list_per_page = 25
 
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('fullName', 'phone', 'email', 'message', 'date_created')
+    list_filter = ('date_created',)
+    list_per_page = 25
+
+
 
 admin.site.register(Customers, CustomersAdmin)
 admin.site.register(Dealers, DealersAdmin)
@@ -42,5 +48,6 @@ admin.site.register(Orders)
 admin.site.register(Address, AddressAdmin)
 admin.site.register(Shipping)
 admin.site.register(OrderDetails, OrderDetailsAdmin)
+admin.site.register(Contact, ContactAdmin)
 
 

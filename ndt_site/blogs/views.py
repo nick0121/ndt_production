@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def blogs(request):
     return render(request, 'blogs/blogs.html')
 
 

@@ -675,7 +675,7 @@ form {
   text-transform: uppercase;
 }
 
-input {
+.input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -685,7 +685,7 @@ input {
   box-sizing: border-box;
 }
 
-textarea {
+.textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -695,7 +695,7 @@ textarea {
   box-sizing: border-box;
 }
 
-button {
+.btn-form {
   width: 100%;
   border: 2px solid #D66706;
   color: #D66706;
@@ -707,7 +707,7 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+.btn-form:hover {
   background-color: #D66706;
   color: white;
 }

@@ -46,23 +46,28 @@
                 </section>
             </div>
             <div class="col-lg-5 col-centered">
-                <!-- form -->
-                <form action="">
 
+                <!-- form -->
+                <form method = "POST">
+                    {% csrf_token %}
                     <h3>contact form</h3>
                     <h4>leave us a message and someone will contact you soon</h4>
+                    <div class="form-group">
+                        {{ form.as_p }}
+                    </div>
 
-                    <input placeholder="Your name" type="text" tabindex="1" required>
+                    <!-- <input placeholder="Your name" type="text" tabindex="1" required>
                     
-                    <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                    <input class="input" placeholder="Your Email Address" type="email" tabindex="2" required>
                     
-                    <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                    <input class="input" placeholder="Your Phone Number" type="tel" tabindex="3" required>
                     
-                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                    <textarea class="textarea" placeholder="Type your Message Here...." tabindex="5" required></textarea> -->
 
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    <button class="btn-form" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
 
                 </form>
+
             </div>
         </div>
         

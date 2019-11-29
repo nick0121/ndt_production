@@ -4,7 +4,7 @@ from .models import Towers, Images, MANUFACTURERS
 # Create your views here.
 def index(request):
 
-    towers = Towers.objects.all() ########## ADD SORT BY ############
+    towers = Towers.objects.values('title', 'description', 'price') ########## ADD SORT BY ############
     images = Images.objects.all()
 
     context = {
