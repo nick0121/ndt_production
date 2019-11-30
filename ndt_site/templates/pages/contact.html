@@ -51,21 +51,17 @@
                 <form method = "POST">
                     {% csrf_token %}
                     <h3>contact form</h3>
-                    <h4>leave us a message and someone will contact you soon</h4>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <h4 class="{{message.tags}}">{{ message }}</h4>
+                        {% endfor %}
+                    {% else %}
+                        <h4>leave us a message and someone will contact you soon</h4>
+                    {% endif %}
                     <div class="form-group">
                         {{ form.as_p }}
                     </div>
-
-                    <!-- <input placeholder="Your name" type="text" tabindex="1" required>
-                    
-                    <input class="input" placeholder="Your Email Address" type="email" tabindex="2" required>
-                    
-                    <input class="input" placeholder="Your Phone Number" type="tel" tabindex="3" required>
-                    
-                    <textarea class="textarea" placeholder="Type your Message Here...." tabindex="5" required></textarea> -->
-
                     <button class="btn-form" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-
                 </form>
 
             </div>

@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.contrib import messages
 
 
 ############################################################# INDEX VIEWS ############################################
@@ -16,6 +19,10 @@ def contact(request):
 
         if form.is_valid():
             form.save()
+            form = ContactForm()
+            messages.success(request, 'Thanks!! Someone will contact you soon')
+            return HttpResponseRedirect(reverse('contact'))
+
     else:
         form = ContactForm()
 

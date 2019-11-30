@@ -662,10 +662,14 @@ form {
   padding: 20px;
 }
 
+form p {
+  margin: 0;
+}
+
 .col-lg-5 h4 {
   font-family: 'Abel', sans-serif;
   padding: 0 15px 0 15px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .col-lg-5 h3 {
@@ -675,7 +679,18 @@ form {
   text-transform: uppercase;
 }
 
-.input {
+
+.col-lg-5 h4.success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  border-radius: 4px;
+}
+
+
+#id_fullName,
+#id_phone,
+#id_email {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -685,7 +700,7 @@ form {
   box-sizing: border-box;
 }
 
-.textarea {
+#id_message {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -693,6 +708,7 @@ form {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  height: 80px;
 }
 
 .btn-form {
@@ -744,11 +760,11 @@ form {
 .social li {
   display: inline;
   padding: 10px;
-  color: #D66706;
+  color: #333;
 }
 
 .social li:hover {
-  color: #6d2602;
+  color: #D66706;
 }
 
 /******************************************************** Article (Blog) styles *********************************************************************/
@@ -1714,9 +1730,11 @@ input[type=text]:focus {
     width: 100%;
   }
 
-  /* .box {
-    justify-content: left;
-  } */
+
+
+  #id_message {
+    height: 100px;
+  }
 
 }
 
@@ -1782,6 +1800,10 @@ input[type=text]:focus {
   .container h1 {
     text-transform: uppercase;
     font-size: 3.5rem;
+  }
+
+  .col-lg-5 h4 {
+    font-size: 1.2rem;
   }
 }
 
