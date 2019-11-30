@@ -4,13 +4,13 @@ from .models import Towers, Images, MANUFACTURERS
 # Create your views here.
 def index(request):
 
-    towers = Towers.objects.values('title', 'description', 'price') ########## ADD SORT BY ############
-    images = Images.objects.all()
+    towers = Towers.objects.all()
+    # towers = Towers.objects.values('title', 'description', 'price') ########## ADD SORT BY ############
+    # images = Images.objects.all()
 
     context = {
         'towers': towers,
-        'images': images,
-        'manufacturers': MANUFACTURERS,
+        # 'manufacturers': MANUFACTURERS,
     }
 
     return render(request, 'towers/towers.html', context)

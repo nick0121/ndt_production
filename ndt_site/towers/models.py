@@ -41,8 +41,11 @@ class Towers(models.Model):
     end_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
     model = models.CharField(max_length=20)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    description = models.TextField(blank=True) ############################ MAKE REQUIRED ###########################################
+    description = models.TextField(blank=False) 
 
+
+    def first_image(self):
+        return self.images[0]
 
     def __str__(self):
         return self.title
@@ -139,7 +142,7 @@ class Images(models.Model):
     )
 
     title = models.CharField(max_length=100)
-    tower = models.ForeignKey(Towers, on_delete=models.CASCADE, blank=True, null=True, default=None)
+    tower = models.ForeignKey(Towers, on_delete=models.CASCADE, blank=True, null=True, default=None, related_name='images')
     product = models.ForeignKey('pages.Products', on_delete=models.CASCADE, blank=True, null=True, default=None)
     description = models.TextField(blank=True)
     manufacturer = models.CharField(choices=MANUFACTURERS, default=None, max_length=50)
