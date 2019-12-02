@@ -5,9 +5,9 @@ from .forms import SearchForm
 # Create your views here.
 def index(request):
 
-    # query = request.GET.get('tower_id')
+    query = request.GET.get('tower_id')
     form = SearchForm()
-    
+    print(query)  ############################################################# REMOVE ######### USE QUERY TO FILTER ITEMS
     towers = Towers.objects.values('title', 'description', 'price')
     images = Towers.objects.all()
 

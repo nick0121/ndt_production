@@ -18,10 +18,13 @@
         <div class="jumbotron">
 
             <p>Enter the manufacturer of your boat</p>
-            <form action="/towers/" method="get" id="tower-form">
+
+            <form action="{% url 'towers' %}" method="get" id="tower-form">
                 {{ form }}
                 <input type="submit" value="Submit" class="tower-input">
             </form>
+
+
             <!-- <p>Select your boat manufacturer from the dropdown</p>
             <div class="custom-dropdown">
                 

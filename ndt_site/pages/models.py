@@ -2,7 +2,7 @@ from django.db import models
 from django_countries.fields import CountryField
 from localflavor.us.us_states import STATE_CHOICES
 from phone_field import PhoneField
-from towers.models import MANUFACTURERS
+from .choices import *
 
 
 
