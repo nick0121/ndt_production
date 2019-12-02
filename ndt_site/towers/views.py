@@ -5,9 +5,8 @@ from .forms import SearchForm
 # Create your views here.
 def index(request):
 
-    quuery = request.GET.get('tower_id')
+    # query = request.GET.get('tower_id')
     form = SearchForm()
-    print(quuery)
     
     towers = Towers.objects.values('title', 'description', 'price')
     images = Towers.objects.all()
@@ -26,6 +25,16 @@ def index(request):
 def tower(request, tower_id):
 
     
+    form = SearchForm()
+    print(tower_id)
+    towers = Towers.objects.values('title', 'description', 'price')
+    images = Towers.objects.all()
 
-    return render(request, 'towers/tower.html')
+    context = {
+        'towers': towers,
+        'images': images,
+        'form': form
+    }
+
+    return render(request, 'towers/towers.html', context)
 
