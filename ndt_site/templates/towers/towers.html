@@ -16,24 +16,25 @@
 
     <div class="container">
         <div class="jumbotron">
+
             <p>Select your boat manufacturer from the dropdown</p>
+            <form action="/towers/" method="get">
+                {{ form }}
+                <input type="submit" value="Submit">
+            </form>
+            <!-- <p>Select your boat manufacturer from the dropdown</p>
             <div class="custom-dropdown">
                 
-                <select name="" id="boats">
-                    <option value="0">Mastercraft</option>
+                <div class="form-group">
+                    <select name="manufacturers" id="boats">
+                        {% for x,y in form.fields.manufacturer.choices %}
+                            <option value="{{x}}"{% if form.fields.manufacturer.value == x %} selected{% endif %}>{{y}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+ 
+            </div> -->
 
-                    <option value="1">Moomba</option>
-                    <option value="2">Supra</option>
-                    <option value="3">Natique</option>
-                    <option value="4">Bayliner</option>
-                    <option value="5">Sea Ray</option>
-                    <option value="6">Crownline</option>
-                    <option value="7">Caravelle</option>
-                    <option value="8">Tige</option>
-                    <option value="9">Yamaha</option>
-                    <option value="10">Seadoo</option>
-                </select>
-            </div>
             
             <!--Boat name from selection load placeholder-->
             
@@ -71,9 +72,9 @@
                 </div>
 
             </div>
-            <div class="button-stacked">
+            <!-- <div class="button-stacked">
                 <a href="#!">Select your boat</a>
-            </div>
+            </div> -->
 
             
             <a href="{% url 'installation' %}"><p class="bottom-content">Installation guide | <span><a href="{% url 'faq' %}">FAQ</a></span></p></a>
@@ -106,8 +107,8 @@
                     {% for tower in towers %}
                         <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
                         <div class="card">
-                            {% for tower in towers %}
-                                <img src="{{ tower.first_image.src }}" alt="" class="card-image">
+                            {% for image in images %}
+                                <img src="{{ image.image }}" alt="" class="card-image">
                             {% endfor %}
                             <h3 class="card-title">{{tower.title}}</h3>
                             <p class="card-tag">{{ tower.description }}</p>
