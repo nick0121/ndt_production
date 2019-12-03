@@ -51,6 +51,11 @@ h1, h2, h3 {
   height: 100px;
 }
 
+.spacer-xs {
+  width: 100%;
+  height: 50px;
+}
+
 .fullsize-background {
   width: 100%;
   height: 400px; 
@@ -927,120 +932,6 @@ input[type=text]:focus {
 
 .boat-features {
   margin-bottom: 2rem;
-}
-
-
-
-/**************************** CUSTOM FORM STYLES **************************/
-#tower-form {
-  margin-bottom: 1rem;
-  padding: 0;
-}
-
-
-
-
-
-
-
-.custom-dropdown {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 3rem;
-}
-
-.custom-dropdown select {
-  background-color: #D66706;
-  color: #fff;
-  font-size: inherit;
-  padding: .5rem 4rem;
-  border: 0;
-  margin: 0;
-  border-radius: 3px;
-  text-indent: 0.01px;
-  text-overflow: '';
-  /*Hiding the select arrow for firefox*/
-  -moz-appearance: none;
-  /*Hiding the select arrow for chrome*/
-  -webkit-appearance:none;
-  /*Hiding the select arrow default implementation*/
-  appearance: none;
-  outline: 0;
-
-}
-/*Hiding the select arrow for IE10*/
-.custom-dropdown select::-ms-expand {
-  display: none;
-}
-
-.custom-dropdown select:hover {
-  cursor: pointer;
-}
-
-
-.custom-dropdown::before,
-.custom-dropdown::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.custom-dropdown::after { /*  Custom dropdown arrow */
-  content: "\25BC";
-  height: 1em;
-  font-size: .625em;
-  line-height: 1;
-  right: 1.2em;
-  top: 50%;
-  margin-top: -.5em;
-}
-
-
-.custom-dropdown::before { /*  Custom dropdown arrow cover */
-  width: 2em;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0 3px 3px 0;
-  background-color: rgba(0,0,0,0.2);
-}
-
-.custom-dropdown::after {
-  color: rgba(0,0,0,.6);
-}
-
-.custom-dropdown select[disabled] {
-  color: rgba(0,0,0,.25);
-}
-
-.custom-dropdown select option {
-  border: 0;
-  outline: 0;
-}
-
-
-.selection-heading {
-  margin-bottom: 2rem;
-}
-
-.button-stacked {
-  padding-bottom: 1rem;
-}
-
-.button-stacked a {
-  padding: 0.5rem 3rem;
-  text-decoration: none;
-  color: #D66706;
-  font-weight: bold;
-  border: 2px solid #D66706;
-  border-radius: 5px;
-  text-transform: uppercase;
-}
-
-.button-stacked a:hover {
-  background-color: #D66706;
-  color: #fff;
 }
 
 

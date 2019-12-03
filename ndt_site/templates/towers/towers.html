@@ -17,33 +17,17 @@
     <div class="container">
         <div class="jumbotron">
 
-            <p>Enter the manufacturer of your boat</p>
-
-            <form action="{% url 'towers' %}" method="get" id="tower-form">
+            <p>Select the manufacturer of your boat</p>
+            <!--------Select form and submit button------------>
+            <form action="{% url 'towers' %}" method="get" id="tower-form"> 
                 {{ form }}
-                <input type="submit" value="Submit" class="tower-input">
+                <input type="submit" value="Submit" class="btn btn-primary">
             </form>
-
-
-            <!-- <p>Select your boat manufacturer from the dropdown</p>
-            <div class="custom-dropdown">
-                
-                <div class="form-group">
-                    <select name="manufacturers" id="boats">
-                        {% for x,y in form.fields.manufacturer.choices %}
-                            <option value="{{x}}"{% if form.fields.manufacturer.value == x %} selected{% endif %}>{{y}}</option>
-                        {% endfor %}
-                    </select>
-                </div>
- 
-            </div> -->
-
-            
-            <!--Boat name from selection load placeholder-->
+            <div class="spacer-xs"></div>
             
             <div class="row">
                 <div class="col-lg-6">
-                    <!-- <img src="/img/mastercraft-tower.jpg" alt=""> -->
+                    
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -75,13 +59,11 @@
                 </div>
 
             </div>
-            <!-- <div class="button-stacked">
-                <a href="#!">Select your boat</a>
-            </div> -->
+
 
             
             <a href="{% url 'installation' %}"><p class="bottom-content">Installation guide | <span><a href="{% url 'faq' %}">FAQ</a></span></p></a>
-            <!--Boat brand name dynamically loaded-->
+
             
         </div>
 
