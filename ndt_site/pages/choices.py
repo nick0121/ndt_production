@@ -11,7 +11,7 @@ FINISHES = (
 )
 
 MANUFACTURERS = (
-    ('none', 'None'),
+    ('none', 'select a manufacturer'),
     ('mastercraft', 'Mastercraft'),
     ('moomba', 'Moomba'),
     ('stingray', 'Stingray'),

@@ -110,9 +110,9 @@
                     {% for tower in towers %}
                         <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
                         <div class="card">
-                            {% for image in images %}
-                                <img src="{{ image.image }}" alt="" class="card-image">
-                            {% endfor %}
+
+                            <img src="{{ tower.first_image.src }}" alt="" class="card-image">
+                            
                             <h3 class="card-title">{{tower.title}}</h3>
                             <p class="card-tag">{{ tower.description }}</p>
                             <div class="card-bottom">

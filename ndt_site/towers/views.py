@@ -6,15 +6,17 @@ from .forms import SearchForm
 def index(request):
 
     query = request.GET.get('tower_id')
+    if query == None:
+        query = 'mastercraft'
+
     form = SearchForm()
-    print(query)  ############################################################# REMOVE ######### USE QUERY TO FILTER ITEMS
-    towers = Towers.objects.values('title', 'description', 'price')
-    images = Towers.objects.all()
+    
+    towers = Towers.objects.filter(manufacturer=query)
+
 
     context = {
         'towers': towers,
-        'images': images,
-        'form': form
+        'form': form,
     }
 
     return render(request, 'towers/towers.html', context)
@@ -25,15 +27,14 @@ def index(request):
 def tower(request, tower_id):
 
     
-    form = SearchForm()
-    print(tower_id)
-    towers = Towers.objects.values('title', 'description', 'price')
-    images = Towers.objects.all()
+    form = SearchForm(tower_id)
+    
+    towers = Towers.objects.filter(manufacturer=tower_id)
+    
 
     context = {
         'towers': towers,
-        'images': images,
-        'form': form
+        'form': form,
     }
 
     return render(request, 'towers/towers.html', context)
