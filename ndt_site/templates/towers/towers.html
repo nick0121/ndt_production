@@ -19,7 +19,8 @@
 
             <p>Select the manufacturer of your boat</p>
             <!--------Select form and submit button------------>
-            <form action="{% url 'towers' %}" method="get" id="tower-form"> 
+            <form action="{% url 'towers' %}" method="POST" id="tower-form"> 
+                {% csrf_token %}
                 {{ form }}
                 <input type="submit" value="Submit" class="btn btn-primary">
             </form>
@@ -93,7 +94,7 @@
                         <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
                         <div class="card">
 
-                            <img src="{{ tower.first_image.src }}" alt="" class="card-image">
+                            <img src="{{ tower.first_image.url }}" alt="" class="card-image">
                             
                             <h3 class="card-title">{{tower.title}}</h3>
                             <p class="card-tag">{{ tower.description }}</p>

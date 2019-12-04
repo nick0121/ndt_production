@@ -3,17 +3,16 @@ from .models import Towers
 from .forms import SearchForm
 
 # Create your views here.
+################################# From index page no link parameter ############# Load all towers
 def index(request):
 
-    query = request.GET.get('tower_id')
-    if query == None:
-        query = 'mastercraft'
-
     form = SearchForm()
+    if request.method == "POST":
+        selection = request.POST.get('tower_id')
+        towers = Towers.objects.filter(manufacturer=selection)
+    else:
+        towers = Towers.objects.all()
     
-    towers = Towers.objects.filter(manufacturer=query)
-
-
     context = {
         'towers': towers,
         'form': form,
@@ -24,14 +23,13 @@ def index(request):
 
 
 
+#################################################### Render from Index manufacturer selection passes tower_id to method
 def tower(request, tower_id):
 
-    
-    form = SearchForm(tower_id)
-    
+    form = SearchForm()
+
     towers = Towers.objects.filter(manufacturer=tower_id)
     
-
     context = {
         'towers': towers,
         'form': form,
@@ -39,3 +37,22 @@ def tower(request, tower_id):
 
     return render(request, 'towers/towers.html', context)
 
+
+
+
+########################################################## Render template from selection routes through select_tower
+# def tower_from_select(request, manufacturer):
+    
+#     form = SearchForm()
+#     if request.method == "POST":
+#         selection = request.POST.get('tower_id')
+#         towers = Towers.objects.filter(manufacturer=selection)
+#     else:
+#         towers = Towers.objects.all()
+    
+#     context = {
+#         'towers': towers,
+#         'form': form,
+#     }
+
+#     return render(request, 'towers/towers.html', context)

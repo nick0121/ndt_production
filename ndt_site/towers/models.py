@@ -27,11 +27,12 @@ class Towers(models.Model):
     description = models.TextField(blank=False) 
 
 
-    def first_image(self):
-        main_image = Images.objects.filter(orientation__contains='main')
-        print(main_image.image)
-        return main_image.image
+    def first_image(self, tower_id):
 
+        main_image = Images.objects.filter(orientation__contains='main')
+        print(main_image)
+        return main_image
+                                                                                      
 
     def __str__(self):
         return self.title
