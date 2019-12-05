@@ -31,7 +31,7 @@ class Towers(models.Model):
 
         main_image = self.objects.filter(images__orientation='main')
         print(main_image)
-        return main_image.url
+        return main_image
                                                                                       
 
     def __str__(self):

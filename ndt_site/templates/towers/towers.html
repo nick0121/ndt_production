@@ -91,18 +91,20 @@
 
                 {% if towers %}
                     {% for tower in towers %}
-                        <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
-                        <div class="card">
+                        {% for image in images %}
+                            <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
+                            <div class="card">
 
-                            <img src="{{ tower.first_image.url }}" alt="" class="card-image">
-                            
-                            <h3 class="card-title">{{tower.title}}</h3>
-                            <p class="card-tag">{{ tower.description }}</p>
-                            <div class="card-bottom">
-                                <p class="card-price">${{ tower.price | intcomma }}</p>
-                                <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
+                                <img src="{{ image.image.0 }}" alt="" class="card-image">
+                                
+                                <h3 class="card-title">{{tower.title}}</h3>
+                                <p class="card-tag">{{ tower.description }}</p>
+                                <div class="card-bottom">
+                                    <p class="card-price">${{ tower.price | intcomma }}</p>
+                                    <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
+                                </div>
                             </div>
-                        </div>
+                        {% endfor %}
                     {% endfor %}
                 {% else %}
                     <div class="col-md-12">

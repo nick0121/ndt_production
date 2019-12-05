@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Towers
+from .models import Towers, Images
 from .forms import SearchForm
 
 # Create your views here.
@@ -13,9 +13,13 @@ def index(request):
     else:
         towers = Towers.objects.all()
     
+    images = Images.objects.all()
+
+
     context = {
         'towers': towers,
         'form': form,
+        'images': images,
     }
 
     return render(request, 'towers/towers.html', context)
@@ -29,10 +33,13 @@ def tower(request, tower_id):
     form = SearchForm()
 
     towers = Towers.objects.filter(manufacturer=tower_id)
+
+    images = Images.objects.all()
     
     context = {
         'towers': towers,
         'form': form,
+        'images': images,
     }
 
     return render(request, 'towers/towers.html', context)
