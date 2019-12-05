@@ -1,10 +1,11 @@
-Django==2.2.7
+-i https://pypi.org/simple/
 django-countries==5.5
 django-localflavor==2.2
 django-phone-field==1.8.0
-Pillow==6.2.1
-psycopg2==2.8.4
+django==2.2.8
+pillow==6.2.1
 psycopg2-binary==2.8.4
+psycopg2==2.8.4
 python-stdnum==1.12
 pytz==2019.3
 six==1.13.0
