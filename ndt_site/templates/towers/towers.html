@@ -28,22 +28,56 @@
             
             <div class="row">
                 <div class="col-lg-6">
-                    
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="">
+                        {% if main_img %}
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    {% if main_img %}
+                                        <img class="swiper-img" src="{{ main_img.0.image.url }}" alt="{{ main_img.0.description }}">
+                                    {% else %}
+                                        <img class="swiper-img" src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="Main image of wakeboard tower">
+                                    {% endif %}
+                                </div>
+                                <div class="swiper-slide">
+                                    {% if ang_img %}
+                                        <img class="swiper-img" src="{{ ang_img.0.image.url }}" alt="{{ ang_img.0.description }}">
+                                    {% else %}
+                                        <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="angled image of wakeboard tower">
+                                    {% endif %}
+                                </div>
+                                <div class="swiper-slide">
+                                    {% if back_img %}
+                                        <img class="swiper-img" src="{{ back_img.0.image.url }}" alt="{{ back_img.0.description }}">
+                                    {% else %}
+                                        <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="back image of wakeboard tower">
+                                    {% endif %}
+                                </div>
+                                <div class="swiper-slide">
+                                    {% if coll_img %}
+                                        <img class="swiper-img" src="{{ coll_img.0.image.url }}" alt="{{ coll_img.0.description }}">
+                                    {% else %}
+                                        <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="collapsed image of wakeboard tower">
+                                    {% endif %}
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="">
+                        {% else %}
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="main image of wakeboard tower">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="angled view of wakeboard tower">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="back view of wakeboard tower">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="collapsed view of wakeboard tower">
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="">
-                            </div>
-                        
-                        </div>
-
+                        {% endif %}
                     </div>
+
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
@@ -94,9 +128,9 @@
                         
                             <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
                             <div class="card">
-                                {% for image in images %}
-                                    <img src="{{ image.image.0 }}" alt="" class="card-image">
-                                {% endfor %}
+                                
+                                    <img src="{{ tower.first_image.url }}" alt="{{ tower.alt_text }}" class="card-image">
+                                
                                 <h3 class="card-title">{{tower.title}}</h3>
                                 <p class="card-tag">{{ tower.description }}</p>
                                 <div class="card-bottom">
