@@ -49,3 +49,7 @@ def faq(request):
     return render(request, 'pages/faq.html')
 
     
+
+############################################################# FAQ VIEWS ############################################
+def sitemap(request):
+    return render(request, 'pages/sitemap.html')

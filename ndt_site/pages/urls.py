@@ -10,4 +10,5 @@ urlpatterns = [
     path('biminis', views.biminis, name="biminis"),
     path('installation', views.installation, name="installation"),
     path('faq', views.faq, name="faq"),
+    path('sitemap', views.sitemap, name="sitemap"),
 ]

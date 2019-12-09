@@ -479,51 +479,112 @@ h1, h2, h3 {
 footer {
   width: 100%;
   background-color: #333;
-  height: 400px;
+  height: auto;
   color: #fff;
-  padding: 10px;
   overflow-x: hidden;
-  text-align: center;
   overflow-y: hidden;
 }
 
-footer ul.social {
-  text-decoration: none;
-  list-style: none;
-  padding: 5px 10px;
+footer .row {
+  margin: 20px 0 20px 0;
+  padding: 20px;
 }
 
-footer ul.social li {
-  display: inline;
-  padding: 0 10px;
+footer h5 {
+  /* text-align: left; */
+  text-transform: uppercase;
 }
 
-footer li:hover {
-  color: #D66706;
-  font-weight: bold;
+footer .col-md-4 p {
+  color: rgba(255, 255, 255, .60);
 }
+
+footer img {
+  max-width: 200px;
+  padding: 20px;
+}
+
 
 footer ul {
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+
+
+footer li {
   display: inline-block;
-  text-align: left;
-  list-style: none;
-  padding: 5px;
 }
 
-.sitemap ul li a:hover {
-  color: #D66706;
-  cursor: pointer;
+footer li a{
+  color: rgba(255, 255, 255, .60);
 }
 
-.address h6 a {
+footer li a:hover{
+  color: rgba(255, 255, 255, .20);
+}
+
+footer .address {
+  margin: 5px 0 5px 0;
+  color: rgba(255, 255, 255, .60);
+}
+
+
+footer .address ul li p{
+  font-size: 0.8rem;
+  
+  margin: 0;
+}
+
+footer .address ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, .60);
+}
+
+footer .address ul li a:hover {
+  color: rgba(255, 255, 255, .20);
+}
+
+footer .copy {
+  margin: 5px 0 20px 0;
+}
+
+footer .copy li p {
+  color: rgba(255, 255, 255, .60);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+footer .copy ul li a:hover{
+  color: rgba(255, 255, 255, .20);
+}
+
+footer .top-line {
+  width: 80%;
+  height: 10px;
+  border-top: 1px solid rgba(255, 255, 255, .20);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .line {
+  width: 80%;
+  height: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, .20);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer ul li:first-child {
   color: #fff;
 }
 
-.address h6 a:hover {
-  color: #D66706;
-  cursor: pointer;
-  list-style-type: none;
-  text-decoration: none;
+footer .navigate li {
+  display: block;
+}
+
+footer .copy i {
+  padding: 0 10px 0 10px;
+  color: #fff;
 }
 
 /*************accessories ***************/
@@ -1471,29 +1532,21 @@ input[type=text]:focus {
 
 
   /*Footer items*********************************/
-  footer {
-    height: 450px;
-    padding: 0 10px;
+
+  footer .address ul li p{
+    font-size: 1rem;
   }
 
-  footer ul {
-    margin-bottom: 50px;
-  }
-
-  footer li {
-    display: inline-block;
-    padding: 0 20px;
-    font-size: 1.4rem;
-  }
-
-  footer h6 {
-    font-size: 1.2rem;
-    padding: 5px 20px;
+  footer .copy ul li p{
+    font-size: 0.9rem;
   }
 
   .social-links {
     padding-top: 20px;
   }
+
+
+
 
   /* Banner links */
   .banner-links {
