@@ -62,3 +62,10 @@ ORIENTATIONS = (
     ('collapsed', 'Collapsed'),
 )
 
+CATEGORY = (
+    ('tower', 'Tower'),
+    ('bimini', 'Bimini'),
+    ('gear', 'Gear'),
+    ('board_rack', 'Board Racks'),
+    ('accessory', 'Accessory'),
+)

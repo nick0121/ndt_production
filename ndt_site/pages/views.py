@@ -3,6 +3,7 @@ from .forms import ContactForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
+from .models import Products
 
 
 ############################################################# INDEX VIEWS ############################################
@@ -34,7 +35,26 @@ def contact(request):
 
 ############################################################# ACCESSORIES VIEWS ############################################
 def accessories(request):
-    return render(request, 'pages/accessories.html')
+
+    products = Products.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'pages/accessories.html', context)
+
+
+def accessory(request, query):
+
+
+    products = Products.objects.filter(category=query)
+
+    context = {
+        'products': products
+    }
+    
+    return render(request, 'pages/accessories.html', context)
 
 ############################################################# BIMINIS VIEWS ############################################
 def biminis(request):

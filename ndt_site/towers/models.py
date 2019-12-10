@@ -28,23 +28,9 @@ class Towers(models.Model):
 
 
     def first_image(self):
-
         main_image = Images.objects.filter(tower_id=self.id, orientation='main')
-        
-        return main_image[0].image
-
-    # def angled_image(self):
-    #     swiper_img = Images.objects.filter()
-    #     print(ang_img[0].image)
-    #     return ang_img[0].image
-
-    def alt_text(self):
-
-        alt_txt = Images.objects.filter(tower_id=self.id)
-        return alt_txt[0].description
-
-        
-                                                                                      
+        return main_image[0]
+                                                                         
 
     def __str__(self):
         return self.title

@@ -7,7 +7,7 @@
 <main>
 
     <div class="main-description">
-        <h2>NDT Accessories & parts</h2>
+        <h2>NDT Parts & Accessories</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestiae, recusandae rerum ipsa molestias quibusdam cupiditate. Aliquam, excepturi! Recusandae, nostrum quia harum deleniti, perspiciatis porro laborum facere cum quasi doloribus ex commodi ab corporis fuga at ipsum, iure earum voluptas tempora voluptates iusto alias! Quo alias voluptate dolores unde dicta!</p>
         <br>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, ducimus molestiae? Suscipit reiciendis soluta maiores, ea aspernatur corporis doloremque officiis.</p>
@@ -18,140 +18,42 @@
         <h2>Accessories</h2>
         <div class="row">
             <div class="item col-sm col-lg-4">
-                <a href="#!"><img class="highlighted" src="{% static 'img/bimini_cat.jpg' %}" alt=""></a>
-                <a href="#!"><p>Biminis</p></a>
+                <a href="{% url 'biminis' %}"><img class="highlighted" src="{% static 'img/bimini_cat.jpg' %}" alt=""></a>
+                <a href="{% url 'biminis' %}"><p>Biminis</p></a>
             </div>
             <div class="item col-sm col-lg-4">
-                <a href="#!"><img class="highlighted" src="{% static 'img/racks.jpg' %}" alt=""></a>
-                <a href="#!"><p>Racks</p></a>
+                <a href="{% url 'accessory' query='board_rack' %}"><img class="highlighted" src="{% static 'img/racks.jpg' %}" alt=""></a>
+                <a href="{% url 'accessory' query='board_rack' %}"><p>Racks</p></a>
             </div>
             <div class="item col-sm col-lg-4">
-                <a href="#!"><img class="highlighted" src="{% static 'img/clothing_cat.jpg' %}" alt=""></a>
-                <a href="#!"><p>Parts & Gear</p></a>
+                <a href="{% url 'accessory' query='gear' %}"><img class="highlighted" src="{% static 'img/clothing_cat.jpg' %}" alt=""></a>
+                <a href="{% url 'accessory' query='gear' %}"><p>Parts & Gear</p></a>
             </div>
         </div>
     </div>
 
     <!----------------Cards------------------->
     
-    <div class="a-card-container">
+    <div class="a-card-container" id="parts">
         <h2>Parts & Gear</h2>
 
         <div class="box">
 
-<!----------------- Load cards from database -------------->
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
+            {% if products %}
+                {% for product in products %}
+                <div class="a-card">
+                    <a href="#!"><img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img"></a>
+                    <a href="#!"><h3 class="a-card-title">{{ product.name }}</h3></a>
+                    <p class="a-card-tag">{{ product.description }}</p>
+                    <div class="a-card-bottom">
+                        <p class="a-card-price">${{ product.price }}</p>
+                        <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
                 </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-            <!---------Card------------->
-            <div class="a-card">
-                <a href="#!"><img src="{% static 'img/qrl-2.jpg' %}" alt="" class="a-card-img"></a>
-                <a href="#!"><h3 class="a-card-title">Gear</h3></a>
-                <p class="a-card-tag">Hats</p>
-                <div class="a-card-bottom">
-                    <p class="a-card-price">$22.95</p>
-                    <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-
-
+                {% endfor %}
+            {% else %}
+                <h2>No products to display</h2>
+            {% endif %}
 
         </div>
     </div>

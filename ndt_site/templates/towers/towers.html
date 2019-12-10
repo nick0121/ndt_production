@@ -128,8 +128,7 @@
                         
                             <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
                             <div class="card">
-                                
-                                    <img src="{{ tower.first_image.url }}" alt="{{ tower.alt_text }}" class="card-image">
+                                <img src="{{ tower.first_image.image.url }}" alt="{{ tower.first_image.description }}" class="card-image">
                                 
                                 <h3 class="card-title">{{tower.title}}</h3>
                                 <p class="card-tag">{{ tower.description }}</p>

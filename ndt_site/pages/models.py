@@ -3,6 +3,7 @@ from django_countries.fields import CountryField
 from localflavor.us.us_states import STATE_CHOICES
 from phone_field import PhoneField
 from .choices import *
+from towers.models import Images
 
 
 
@@ -73,10 +74,10 @@ class Address(models.Model):
 class Products(models.Model):
 
     name = models.CharField(max_length=30)
-
+    category = models.CharField("Category", max_length=50, choices=CATEGORY, default='accessory')
     price = models.DecimalField(max_digits=7, decimal_places=2)
     weight = models.DecimalField(max_digits=7, decimal_places=2)
-    description = models.TextField(blank=True)
+    description = models.TextField()
     sale = models.BooleanField(default=False)
     sale_price = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True)
 
@@ -84,6 +85,12 @@ class Products(models.Model):
         return self.name
 
 
+    def get_image(self):
+        
+        image = Images.objects.filter(product_id=self.id)
+        return image[0]
+
+    
     class Meta:
         verbose_name_plural = "Products"
 
