@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from towers.forms import SearchForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
@@ -58,7 +59,14 @@ def accessory(request, query):
 
 ############################################################# BIMINIS VIEWS ############################################
 def biminis(request):
-    return render(request, 'pages/biminis.html')
+
+    form = SearchForm()
+
+    context = {
+        'form': form
+    }
+    
+    return render(request, 'pages/biminis.html', context)
 
 ############################################################# INSTALLATION VIEWS ############################################
 def installation(request):

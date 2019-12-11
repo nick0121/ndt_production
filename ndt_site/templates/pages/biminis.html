@@ -30,26 +30,144 @@
 
         </div>
     </div>
+    <div class="spacer"></div>
+
     <!-- section -->
-    <div class="bimini-bottom">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
+    <div class="container" id="shop-content">
+        <div class="left-column">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+        </div>
+
+        <div class="middle-column">
+            <!--Middle column images of each color to be replaced with jquery-->
+            <img data-image="black" src="{% static 'img/bimini_cat.jpg' %}" alt="" class="active">
+            <img data-image="red" src="{% static 'img/bimini.jpg' %}" alt="">
+            <img data-image="blue" src="{% static 'img/clothing_cat.jpg' %}" alt="">
+        </div>
+
+        <div class="right-column">
+            <!--Right column markup-->
+            <div class="product-description">
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloremque soluta tenetur amet dicta ducimus temporibus ea incidunt voluptatibus ipsa.</p>
             </div>
-            <div class="col-md-6">
-                <h3 class="bimini-title">Over the top Bimini</h3>
-                <p class="bimini-content">Description from bimini model</p>
-                <div class="thumbnails">
-                    <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
-                    <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
-                    <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
-                    <img src="{% static 'img/bimini_cat.jpg' %}" alt="">
+            <div class="product-config">
+                <!--Color chooser-->
+                <div class="product-color">
+                    <span>Color</span>
+
+                    <div class="color-choose">
+                        <div>
+                            <input data-image="black" type="radio" id="black" name="color" value="black" checked>
+                            <label for="black"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="red" type="radio" id="red" name="color" value="red">
+                            <label for="red"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                            <label for="blue"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="orange" type="radio" id="orange" name="color" value="orange">
+                            <label for="orange"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="green" type="radio" id="green" name="color" value="green">
+                            <label for="green"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="purple" type="radio" id="purple" name="color" value="purple">
+                            <label for="purple"><span></span></label>
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-success">Add to cart</button>
+
+                <div class="tower-config">
+                    <span>Boat model</span>
+                    <div class="tower-choose">
+                        <button>one</button>
+                        <button>two</button>
+                        <button>three</button>
+                    </div>
+
+                    <a href="#!">How to install a bimini</a>
+                </div>
+            </div>
+
+            <div class="product-price">
+                <span>$799.99</span>
+                <a href="#!" class="cart-btn">Add to cart</a>
             </div>
         </div>
     </div>
 
+
+    <!--Make another section to be temporary until checkout function added-->
+    <div class="temp-section" id="temp-section">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            </div>
+            <div class="col-md-4">
+                <div class="temp-description">
+                    <h2 class="temp-title">Title</h2>
+                    <p class="temp-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam quidem molestiae nemo obcaecati quisquam.</p>
+                    
+                                    <!--Color chooser-->
+                    <div class="product-color">
+                    <span>Color</span>
+                        <div class="color-choose">
+                            <div>
+                                <input data-image="black" type="radio" id="black" name="color" value="black" checked>
+                                <label for="black"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="red" type="radio" id="red" name="color" value="red">
+                                <label for="red"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                                <label for="blue"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="orange" type="radio" id="orange" name="color" value="orange">
+                                <label for="orange"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="green" type="radio" id="green" name="color" value="green">
+                                <label for="green"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="purple" type="radio" id="purple" name="color" value="purple">
+                                <label for="purple"><span></span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--price and thumbnails-->
+                    <p class="temp-price">$799.99</p>
+
+                    <img src="{% static 'img/set_screrw.jpg' %}" alt="" class="thumbnail-img">
+                    <img src="{% static 'img/set_screrw.jpg' %}" alt="" class="thumbnail-img">
+                    <img src="{% static 'img/set_screrw.jpg' %}" alt="" class="thumbnail-img">
+                    <img src="{% static 'img/set_screrw.jpg' %}" alt="" class="thumbnail-img">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--End temp section-->
+
+
+    <div class="spacer"></div>
 
 </Main>
 {% endblock %}
