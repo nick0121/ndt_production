@@ -186,16 +186,16 @@ h1, h2, h3 {
 
 .banner_stripe .left-stripe {
   width: 25%;
-  height: 3px;
-  background-color: #0F4C5C;
+  height: 1px;
+  background-color: rgba(15,76,92,0.4);
   display: inline-block;
   margin-right: 5px;
 }
 
 .banner_stripe .right-stripe {
   width: 25%;
-  height: 3px;
-  background-color: #0F4C5C;
+  height: 1px;
+  background-color: rgba(15,76,92,0.4);
   display: inline-block;
   margin-left: 5px;
 }
@@ -1324,9 +1324,7 @@ input[type=text]:focus {
 /************ bimini product detail *********/
 
 /*******Comment out to show checkout feature ************/
-#shop-content {
-  display: none;
-}
+
 /* uncomment to hide for development */
 /* #temp-section {
   display: none;
@@ -1364,11 +1362,15 @@ input[type=text]:focus {
 
 /************* End temp section **************/
 
-.container {
+#shop-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px;
   display: flex;
+}
+
+#shop-content {
+  display: none;
 }
 
 .left-column {
