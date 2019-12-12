@@ -81,3 +81,8 @@ def faq(request):
 ############################################################# FAQ VIEWS ############################################
 def sitemap(request):
     return render(request, 'pages/sitemap.html')
+
+
+############################################################# FAQ VIEWS ############################################
+def orders(request):
+    return render(request, 'pages/orders.html')
