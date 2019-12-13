@@ -241,7 +241,7 @@ h1, h2, h3 {
 
 .wrap {
   width: 100%;
-  height: 550px;
+  height: 450px;
   padding: 2rem;
   background: url("/static/img/wakeboard_background.png");
   background-size: cover;
@@ -290,25 +290,19 @@ h1, h2, h3 {
 
 .featured-tower a {
   display: inline-block;
-  color: #333;
-  width: 80%;
+  color: #fff;
+  width: 70%;
   text-transform: uppercase;
-  padding: 7px 25px;
-  border: 2px solid #D66706;
+  padding: 5px 15px;
   border-radius: 2px;
-  background-color: transparent;
+  background-color: rgb(51, 51, 51);
+  margin-bottom: 20px;
 }
 
 .featured-tower a:hover {
-  background-color: #D66706;
-  color: #fff;
-  border: 2px solid #D66706;
-  border-radius: 2px;
+  background-color: #000;
 }
 
-.left-content {
-  padding: 0;
-}
 
 
 /***********************************FEATURED BIMINI TOPS*************************************/
@@ -373,6 +367,9 @@ h1, h2, h3 {
 
 .accessories p {
   padding: 10px;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 .accessories ul {
@@ -385,18 +382,16 @@ h1, h2, h3 {
   color: #333;
 }
 
-.accessories a:hover {
-  color: #D66706;
-}
 
 .accessories-wrapper a {
-  width: 80%;
+  width: 70%;
   text-transform: uppercase;
-  padding: 7px 25px;
-  border: 2px solid #D66706;
+  color: #fff;
+  padding: 5px 15px;
   border-radius: 2px;
-  background-color: transparent;
-  margin-top: 20px;
+  background-color: #333;
+  margin-bottom: 20px;
+  max-width: 300px;
 }
 
 .accessories-wrapper a:hover {
@@ -404,6 +399,10 @@ h1, h2, h3 {
   color: #fff;
   border: 2px solid #D66706;
   border-radius: 2px;
+}
+
+.accessories-wrapper .swiper-container {
+  max-width: 90%;
 }
 
 .call {
@@ -1671,13 +1670,6 @@ input[type=text]:focus {
     padding: 5px;
   }
 
-  .featured-tower a {
-    width: 75%;
-    padding: 15px 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
 
 
   /*Biminis section******************************/
@@ -1741,13 +1733,6 @@ input[type=text]:focus {
     text-transform: uppercase;
   }
 
-  .accessories-wrapper a {
-    width: 75%;
-    padding: 15px 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
 
   .accessories p {
     font-size: 1.2rem;
@@ -1865,10 +1850,12 @@ input[type=text]:focus {
     font-size: 2rem;
   }
 
-  /*featured items***********************************************/
-  .featured-tower a {
-    width: 60%;
+  .wrap {
+    height: 525px;
   }
+
+  /*featured items***********************************************/
+ 
 
 
   /*Bimini items***********************************************/
@@ -2071,10 +2058,10 @@ input[type=text]:focus {
     font-size: 1.2rem;
   }
 
-  .featured-tower a {
+  /* .featured-tower a {
     width: 50%;
     margin-top: 50px;
-  }
+  } */
 
   /*Biminis section******************************/
   .biminis .logo-sunbrella {

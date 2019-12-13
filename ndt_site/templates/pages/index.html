@@ -111,6 +111,7 @@
                     <li>Lightweight all aluminum construction</li>
                     <li>Specifically designed to match your boat</li>
                 </ul>
+                <a href="{% url 'towers' %}">View towers</a>
             </div>
             <div class="right-content col-sm-10 col-md-6">
                 <img src="{% static 'img/mastercraft-tower.jpg' %}" alt="">
@@ -120,7 +121,7 @@
 
     </div>
 
-    <a href="{% url 'towers' %}">Find your tower</a>
+    
 </section>
 
 
@@ -178,24 +179,31 @@
     <div class="accessories-wrapper">
         <h2 class="options">Featured accessories</h2>
         <p>NDT offers several options for accessories and customization of towers. All our accessories are made in house with the highest quality materials.</p>
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="left-content col-sm-10 col-md-6">
-                    <h2>Starting at $210</h2>
-                    <ul>
-                        <li>machined 6061 billet aluminum</li>
-                        <li>Rugged and durable</li>
-                        <li>Accessories for wakeboarding and ski applications</li>
-                        <li>Compatible with NDT towers</li>
-                        <li>Several options available</li>
-                    </ul>
+        <a href="{% url 'accessories' %}">Shop Accessories</a>
+        <div class="image-gallery">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="">
+                    </div>
                 </div>
-                <div class="right-content col-sm-10 col-md-6">
-                    <img src="{% static 'img/mastercraft-tower.jpg' %}" alt="">
-                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
-        <a href="{% url 'accessories' %}">Shop Accessories</a>
+        
 
         <div class="spacer"></div>
 
