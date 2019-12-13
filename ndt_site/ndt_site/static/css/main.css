@@ -187,7 +187,7 @@ h1, h2, h3 {
 .banner_stripe .left-stripe {
   width: 25%;
   height: 1px;
-  background-color: rgba(15,76,92,0.4);
+  background-color: rgba(25, 38, 41, 0.4);
   display: inline-block;
   margin-right: 5px;
 }
@@ -195,7 +195,7 @@ h1, h2, h3 {
 .banner_stripe .right-stripe {
   width: 25%;
   height: 1px;
-  background-color: rgba(15,76,92,0.4);
+  background-color: rgba(25, 38, 41, 0.4);
   display: inline-block;
   margin-left: 5px;
 }
@@ -241,19 +241,20 @@ h1, h2, h3 {
 
 .wrap {
   width: 100%;
+  height: 550px;
   padding: 2rem;
-  background:linear-gradient(45deg,rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url("/static/img/wakeboarding-sunset.jpeg");
+  background: url("/static/img/wakeboard_background.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
   z-index: -1;
-
-  -moz-box-shadow:0 5px 5px rgba(41, 39, 39, 0.75);
-  -webkit-box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
-  box-shadow: 0 5px 5px rgba(41, 39, 39, 0.75);
 }
 
 .wrap h2 {
   color: #fff;
+  font-size: 1.2rem;
 }
+
 
 
 /****************************************FEATURED TOWERS****************************************************/
@@ -309,55 +310,6 @@ h1, h2, h3 {
   padding: 0;
 }
 
-/**********************FEATURED UNIVERSAL TOWERS*****************************************************/
-.featured-universal-tower {
-  height: auto;
-  text-align: center;
-  margin-bottom: 50px;
-  padding-bottom: 5px;
-  position: relative;
-}
-
-.featured-universal-tower .title{
-  text-transform: uppercase;
-  font-family: 'Abel', sans-serif;
-}
-
-.featured-universal-tower h2 {
-  text-transform: uppercase;
-  font-family: 'Abel', sans-serif;
-  padding: 10px 5px;
-}
-
-.featured-universal-tower ul {
-  text-transform: capitalize;
-  display: inline-block;
-  text-align: left;
-}
-
-.featured-universal-tower ul li {
-  font-size: 1rem;
-}
-
-.featured-universal-tower img {
-  width: 90%;
-}
-
-.featured-universal-tower a {
-  width: 80%;
-  text-transform: uppercase;
-  padding: 7px 25px;
-  border: 2px solid #D66706;
-  border-radius: 2px;
-  background-color: transparent;
-}
-
-.featured-universal-tower a:hover {
-  background-color: #D66706;
-  color: #fff;
-  border: 2px solid #D66706;
-  border-radius: 2px;
-}
 
 /***********************************FEATURED BIMINI TOPS*************************************/
 .biminis {
@@ -872,7 +824,7 @@ article a:hover {
 
 /********************************************************* Styles for search bar *************************************************************/
 
-.wrap {
+/* .wrap {
   text-align: center;
   margin-top: 100px;
   margin-bottom: 50px;
@@ -909,7 +861,7 @@ input[type=text]:focus {
   background-color: transparent;
   border-radius: 5px 0 0 5px;
   margin-right: -5px;
-}
+} */
 
 /************************************** Tower styles **********************************************************************/
 .no-scroll {
@@ -1685,7 +1637,7 @@ input[type=text]:focus {
 
   /*Boat manufacturers*******************************/
   .boat-manufac h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1.2em;
   }
 
@@ -1708,9 +1660,7 @@ input[type=text]:focus {
   }
 
   /*Featured towers********************************/
-  .featured-tower {
-    margin-top: 200px;
-  }
+
 
   .featured-tower h2 {
     font-size: 2rem;
@@ -1920,10 +1870,6 @@ input[type=text]:focus {
     width: 60%;
   }
 
-  /*featured items***********************************************/
-  .featured-universal-tower a {
-    width: 60%;
-  }
 
   /*Bimini items***********************************************/
   .color-selection img {
@@ -2108,6 +2054,10 @@ input[type=text]:focus {
     font-size: 3rem;
   }
 
+  .wrap {
+    height: 700px;
+  }
+
   /*Featured tower section******************************/
   .featured-tower img {
     width: 75%;
@@ -2122,25 +2072,6 @@ input[type=text]:focus {
   }
 
   .featured-tower a {
-    width: 50%;
-    margin-top: 50px;
-  }
-
-
-  /*featured universal tower section******************************/
-  .featured-universal-tower img {
-    width: 75%;
-  }
-
-  .featured-universal-tower h2 {
-    font-size: 3rem;
-  }
-
-  .featured-universal-tower ul li {
-    font-size: 1.3rem;
-  }
-
-  .featured-universal-tower a {
     width: 50%;
     margin-top: 50px;
   }
