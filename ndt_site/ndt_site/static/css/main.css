@@ -395,10 +395,7 @@ h1, h2, h3 {
 }
 
 .accessories-wrapper a:hover {
-  background-color: #D66706;
-  color: #fff;
-  border: 2px solid #D66706;
-  border-radius: 2px;
+  background-color: #000;
 }
 
 .accessories-wrapper .swiper-container {
