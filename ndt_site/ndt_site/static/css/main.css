@@ -575,7 +575,7 @@ footer .copy i {
 }
 
 .a-card-container {
-  background-color: #f4f4f4;
+  background-color: #fff;
   padding: 30px;
 }
 
@@ -1203,7 +1203,7 @@ input[type=text]:focus {
 }
 
 .heading img {
-  width: 400px;
+  width: 100%;
 }
 
 
