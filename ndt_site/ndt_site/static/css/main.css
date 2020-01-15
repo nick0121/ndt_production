@@ -561,7 +561,7 @@ footer .copy i {
 
 .item img {
   width: 80%;
-  max-height: 250px;
+  max-height: 165px;
 }
 
 .item p {
@@ -575,7 +575,7 @@ footer .copy i {
 }
 
 .a-card-container {
-  background-color: #fff;
+  background-color: #eaebec;
   padding: 30px;
 }
 
@@ -594,9 +594,9 @@ footer .copy i {
   width: 15rem;
   background-color: #fff;
   margin: 10px;
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(51,51,51,0.75);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(51,51,51,0.75);
-  box-shadow: 1px 1px 5px 0px rgba(51,51,51,0.75);
+  -webkit-box-shadow: 0px 13px 21px -5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 13px 21px -5px rgba(0,0,0,0.3);
+  box-shadow: 0px 13px 21px -5px rgba(0,0,0,0.3);
 }
 
 .a-card:hover {
