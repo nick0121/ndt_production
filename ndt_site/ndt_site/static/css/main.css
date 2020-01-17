@@ -579,7 +579,7 @@ footer .copy i {
 }
 
 .a-card-container {
-  background-color: #eaebec;
+  /* background-color: #eaebec; */
   background-color: #fff;
   padding: 30px;
 }
@@ -917,6 +917,12 @@ input[type=text]:focus {
   content: ' ';
   display: inline-block;
   vertical-align: middle;
+}
+
+.card-container-tower {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 40px 0 40px 0;
 }
 
 
