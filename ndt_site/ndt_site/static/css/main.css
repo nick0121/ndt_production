@@ -288,6 +288,7 @@ h1, h2, h3 {
 
 .featured-tower img {
   width: 90%;
+  padding-top: 30px;
 }
 
 .featured-tower a {
