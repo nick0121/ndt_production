@@ -184,21 +184,20 @@
         <div class="image-gallery">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="">
-                    </div>
+
+                    {% for product in products %}
+                        <div class="swiper-slide">
+                            <div class="acc-card">
+                                <a href="#!"><img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="acc-card-img"></a>
+                                <a href="#!"><h3 class="acc-card-title">{{ product.name }}</h3></a>
+                                <p class="acc-card-tag">{{ product.description }}</p>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+
+
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>

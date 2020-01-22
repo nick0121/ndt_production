@@ -27,6 +27,7 @@ MANUFACTURERS = (
     ('nautique', 'Nautique'),
     ('yamaha', 'Yamaha'),
     ('supra', 'Supra'),
+    ('ndt', 'NDT'),
     ('not_listed', 'Not Listed')
 )
 

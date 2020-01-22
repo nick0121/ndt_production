@@ -5,11 +5,19 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
 from .models import Products
+from .models import Images
 
 
 ############################################################# INDEX VIEWS ############################################
 def index(request):
-    return render(request, "pages/index.html")
+    products = Products.objects.filter(images__manufacturer="ndt")
+
+    context = {
+        'products': products,
+    }
+    
+
+    return render(request, "pages/index.html", context)
 ############################################################# ABOUT VIEWS ############################################
 def about(request):
     return render(request, "pages/about.html")

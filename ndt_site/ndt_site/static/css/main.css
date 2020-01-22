@@ -405,6 +405,34 @@ h1, h2, h3 {
   max-width: 90%;
 }
 
+/* swiper slide card */
+.acc-card {
+  border: none;
+  border-radius: 4px;
+  width: 18rem;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.acc-card a {
+  background-color: #fff;
+  margin: 0;
+}
+
+.acc-card-img {
+  width: 100%;
+}
+
+h3.acc-card-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+p.acc-card-tag {
+  text-align: center;
+}
+
 .call {
   background-color: #3F88C5;
   width: 100%;
@@ -414,7 +442,7 @@ h1, h2, h3 {
 .call h2 {
   color: #fff;
   padding: 4rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .call a {
@@ -1575,6 +1603,10 @@ input[type=text]:focus {
   .header-image img {
     top: -100px;
   }
+
+  .acc-card {
+    width: 20rem;
+  }
 }
 
 /*******************************RULES FOR SCREEN WIDTHS OF 520 PX OR GREATER***************************************/
@@ -1769,6 +1801,37 @@ input[type=text]:focus {
 
   .accessories .featured-content {
     margin-top: 50px;
+  }
+
+    /* swiper slide card */
+  .acc-card {
+    border: none;
+    border-radius: 4px;
+    width: 25rem;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  .acc-card a {
+    background-color: #fff;
+    margin: 0;
+  }
+
+  .acc-card-img {
+    width: 100%;
+  }
+
+  h3.acc-card-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+
+  .image-gallery {
+    margin-top: 50px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
