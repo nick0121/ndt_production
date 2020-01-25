@@ -188,8 +188,8 @@
                     {% for product in products %}
                         <div class="swiper-slide">
                             <div class="acc-card">
-                                <a href="#!"><img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="acc-card-img"></a>
-                                <a href="#!"><h3 class="acc-card-title">{{ product.name }}</h3></a>
+                                <img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="acc-card-img">
+                                <h3 class="acc-card-title">{{ product.name }}</h3>
                                 <p class="acc-card-tag">{{ product.description }}</p>
                             </div>
                         </div>
