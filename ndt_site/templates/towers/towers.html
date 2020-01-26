@@ -82,10 +82,12 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <div class="col-lg-6">
-                    {% if tower %}
-                        <h3 class="boat-title">has tower</h3>
+                    {% if towers %}
+                        {% with towers|first as tower %}
+                            <h3 class="boat-title">{{ tower.get_name }} tower</h3>
+                        {% endwith %}
                     {% else %}
-                        <h3 class="boat-title">Mastercraft tower</h3>
+                        <h3 class="boat-title">The NDT tower</h3>
                     {% endif %}
                     <p class="boat-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquid nemo, illo nulla dicta ut, dolore molestiae, vero fugiat error nostrum magnam voluptate ipsam placeat tempore deserunt delectus? Vel assumenda soluta maiores aliquid quam placeat consequuntur, nesciunt facere. Quo repellendus ea voluptatibus, unde natus quos suscipit eligendi quibusdam cumque quidem?</p>
                     <ul class="boat-features">
@@ -94,9 +96,7 @@
                         <li>Lorem ipsum dolor sit.</li>
                         <li>Lorem ipsum dolor sit amet consectetur.</li>
                     </ul>
-
                 </div>
-
             </div>
 
 

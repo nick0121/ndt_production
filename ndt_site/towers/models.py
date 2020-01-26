@@ -27,6 +27,12 @@ class Towers(models.Model):
     description = models.TextField(blank=False) 
 
 
+    def get_name(self):
+        name = self.manufacturer
+        print(name)
+        return name
+
+
     def first_image(self):
         main_image = Images.objects.filter(tower_id=self.id, orientation='main')
         return main_image[0]
