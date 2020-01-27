@@ -1269,12 +1269,16 @@ input[type=text]:focus {
 }
 
 .img-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   max-width: 1024px;
   margin: 0 auto;
   padding-top: 50px;
+}
+
+.img-card {
+  width: 100%;
 }
 
 .bimini-gallery img {
@@ -1323,9 +1327,9 @@ input[type=text]:focus {
 /*******Comment out to show checkout feature ************/
 
 /* uncomment to hide for development */
-/* #temp-section {
+#temp-section {
   display: none;
-} */
+}
 
 
 /************* Temp section **************/
@@ -1774,6 +1778,10 @@ input[type=text]:focus {
     width: 80%;
   }
 
+  .img-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
   /*Options and accessories section******************/
   .accessories-wrapper {
     padding: 0px 15px;
@@ -1970,6 +1978,10 @@ input[type=text]:focus {
   .biminis .left-content p {
     font-size: 1rem;
     text-align: justify;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   /*Accessories content****************************************/
