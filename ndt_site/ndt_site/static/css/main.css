@@ -958,6 +958,10 @@ input[type=text]:focus {
   padding: 40px 0 40px 0;
 }
 
+.card-container-tower h3 {
+  padding: 10px
+}
+
 
 /**************************** Swiper styles ***************/
 
@@ -986,6 +990,7 @@ input[type=text]:focus {
 }
 
 .boat-title {
+  text-transform: uppercase;
   margin-top: 2rem;
 }
 
@@ -1207,7 +1212,7 @@ input[type=text]:focus {
 
 .reviews {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
   padding: 20px;
 }
@@ -1225,10 +1230,6 @@ input[type=text]:focus {
   color: #FFA630;
 }
 
-.review-text {
-  max-width: 60%;
-  margin: 0 auto;
-}
 
 /********************** BIMINIS PAGE **********************************/
 .heading {
@@ -1840,6 +1841,13 @@ input[type=text]:focus {
     margin-right: auto;
   }
 
+  .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
 
   /*Footer items*********************************/
 
@@ -1999,6 +2007,13 @@ input[type=text]:focus {
 
   #id_message {
     height: 100px;
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
   }
 
 }

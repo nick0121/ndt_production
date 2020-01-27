@@ -29,7 +29,6 @@ class Towers(models.Model):
 
     def get_name(self):
         name = self.manufacturer
-        print(name)
         return name
 
 
