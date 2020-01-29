@@ -8,7 +8,7 @@
 
     <div class="main-description">
         <h2>NDT Parts & Accessories</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestiae, recusandae rerum ipsa molestias quibusdam cupiditate. Aliquam, excepturi! Recusandae, nostrum quia harum deleniti, perspiciatis porro laborum facere cum quasi doloribus ex commodi ab corporis fuga at ipsum, iure earum voluptas tempora voluptates iusto alias! Quo alias voluptate dolores unde dicta!</p>
+        <p>NDT offers a wide variety of board racks compleand replacement parts, as well as, NDT merchandise. All our racks are CNC machined from high quality 6061 billet aluminum. </p>
         <br>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, ducimus molestiae? Suscipit reiciendis soluta maiores, ea aspernatur corporis doloremque officiis.</p>
     </div>
@@ -33,30 +33,29 @@
     </div>
 
     <!----------------Cards------------------->
+    <div class="container">
+        <div class="a-card-container" id="parts">
+            <h2>Parts & Gear</h2>
     
-    <div class="a-card-container" id="parts">
-        <h2>Parts & Gear</h2>
-
-        <div class="box">
-
-            {% if products %}
-                {% for product in products %}
-                <div class="a-card">
-                    <a href="#!"><img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img"></a>
-                    <a href="#!"><h3 class="a-card-title">{{ product.name }}</h3></a>
-                    <p class="a-card-tag">{{ product.description }}</p>
-                    <div class="a-card-bottom">
+            <div class="box">
+    
+                {% if products %}
+                    {% for product in products %}
+                    <div class="a-card">
+                        <a href="#!"><img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img"></a>
+                        <a href="#!"><h3 class="a-card-title">{{ product.name }}</h3></a>
                         <p class="a-card-price">${{ product.price }}</p>
-                        <!-- <a href="#!" class="a-card-icon"><i class="fas fa-shopping-cart"></i></a> -->
+                        <p class="a-card-tag">{{ product.description }}</p>
                     </div>
-                </div>
-                {% endfor %}
-            {% else %}
-                <h2>No products to display</h2>
-            {% endif %}
-
+                    {% endfor %}
+                {% else %}
+                    <h2>No products to display</h2>
+                {% endif %}
+    
+            </div>
         </div>
     </div>
+
 
 
     <div class="spacer"></div>
