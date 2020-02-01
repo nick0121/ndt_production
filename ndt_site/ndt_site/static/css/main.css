@@ -849,47 +849,6 @@ article a:hover {
 }
 
 
-/********************************************************* Styles for search bar *************************************************************/
-
-/* .wrap {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 50px;
-}
-
-input[type=text]:focus {
-  outline: none;
-}
-
-.search-container a {
-  padding: 6px 10px;
-  color: #D66706;
-  margin-top: 8px;
-  background-color: transparent;
-  font-size: 17px;
-  border: 3px solid #D66706;
-  border-left: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
-
-.search-container a:hover {
-  background-color: #D66706;
-  color: #fff;
-}
-
-
-.searchTerm {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: 3px solid #D66706;
-  border-right: none;
-  background-color: transparent;
-  border-radius: 5px 0 0 5px;
-  margin-right: -5px;
-} */
-
 /************************************** Tower styles **********************************************************************/
 .no-scroll {
   overflow: hidden;
@@ -1109,13 +1068,13 @@ input[type=text]:focus {
   width: 100%;
   height: 50vh;
   background-color: #3F88C5;
+  text-transform: uppercase;
 }
 
 .top-container h1 {
   padding-top: 150px;
   color: #fff;
   font-size: 3rem;
-  text-transform: capitalize;
 }
 
 .top-container h6 {
