@@ -686,6 +686,14 @@ footer .copy i {
   font-weight: bold;
 }
 
+.contact-section h4 a {
+  color: #333;
+}
+
+.contact-section h4 {
+  line-height: 2rem;
+}
+
 .col-lg-5 {
   padding: 0;
 }
