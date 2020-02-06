@@ -235,12 +235,9 @@ h1, h2, h3 {
 .boat-manufac img {
   width: 80%;
   margin-bottom: 50px;
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 
-.boat-manufac img:hover {
-  opacity: 1;
-}
 
 .boat-manufac .two-col-element img {
   width: 90%;
@@ -917,6 +914,49 @@ article a:hover {
 .card-container-tower h3 {
   padding: 10px
 }
+
+/* .arrow-down {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.arrow-down::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  border-right: 4px solid #D66706;
+  border-bottom: 4px solid #D66706;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation: 3s arrow infinite ease;
+  animation: 3s arrow infinite ease;
+  z-index: 1000;
+}
+
+@-webkit-keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
+}
+
+@keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
+} */
 
 
 /**************************** Swiper styles ***************/
@@ -1911,6 +1951,14 @@ article a:hover {
 
   .wrap {
     height: 525px;
+  }
+
+  .boat-manufac img {
+    opacity: 0.7;
+  }
+
+  .boat-manufac img:hover {
+    opacity: 1;
   }
 
   /*featured items***********************************************/
