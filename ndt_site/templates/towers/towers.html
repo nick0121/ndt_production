@@ -9,13 +9,20 @@
 <main>
     <!--------------------------------------STATIC CONTENT ---------------------------------------------------------------->
     <!-- <div class="spacer"></div> -->
-    <div class="header-bg"></div>
-    <h1 class="tower-title">NDT Premium Wakeboard Towers <br> Made in the usa</h1>
+    <!-- <div class="header-bg"></div> -->
+    <!-- <h1 class="tower-title">NDT Premium Wakeboard Towers <br> Made in the usa</h1> -->
 
-    <div class="spacer"></div>
+    <!--ADD A BAR FOR CHECKOUT CART AND MESSAGE-->
+
+    <div class="spacer-xs"></div>
 
     <div class="container">
-        <div class="jumbotron">
+
+        <div class="top-section">
+            <h2>NDT Wakeboard Tower</h2>
+        </div>
+
+        <div class="hero-top">
 
             <p>Select the manufacturer of your boat</p>
             <!--------Select form and submit button------------>
@@ -89,23 +96,18 @@
                             <p class="boat-text">Patterned after the OEM {{tower.get_name|title}} wakeboard towers that were designed specifically for {{tower.get_name|title}} boats.
                                 New Dimension wakeboard towers are strong, lightweight, and built to withstand extreme conditions. All of our towers are specifically designed and fabricated to fit your exact make and model of boat. No universal joints or adjustments are needed. 
                                 Fabricated using 1 7/8 inch diameter, brushed and anodized 6061 aluminum tubing, creating the ultimate light weight, corrosion resistant tower. The mounting base is custom designed and machined using polished billet aluminum removing the need for a large metal plate bolted to the hull. Every element of the New Dimension wakeboard tower is designed to enhance the look and performance of your boat.</p>
-                            <ul class="boat-features">
-                                <li>Based on original OEM wakeboard tower design</li>
-                                <li>Exact fit - not universal or custom</li>
-                                <li>Brushed and anodized aluminum standard - no extra charge</li>
-                                <li>Custom powder-coated colors optional</li>
-                            </ul>
+
                         {% endwith %}
                     {% else %}
                         <h3 class="boat-title">The NDT tower</h3>
                         
                         <p class="boat-text">The NDT “Hybrid” is a new breed of wakeboard towers designed by New Dimension to meet the ever-changing recreational boat market. The “Hybrid” is a cross between an exact fit OEM style tower and a universal tower with all the fit, form and function detailing you have come to expect from New Dimension Towers. Come check out this exciting new industry first, the NDT “Hybrid”!</p>
-                        <ul class="boat-features">
+                        <!-- <ul class="boat-features">
                             <li>Clean seamless look</li>
                             <li>Welded crossmenbers for added rigidity</li>
                             <li>Brushed and anodized aluminum standard - no extra charge</li>
                             <li>Custom powder-coated colors optional</li>
-                        </ul>
+                        </ul> -->
                     {% endif %}
                 </div>
             </div>
@@ -118,7 +120,7 @@
         <div class="spacer-small"></div>
 
         <!--selection banner with links-->
-        <div class="banner-links">
+        <!-- <div class="banner-links">
             <ul>
                 <li><a href="{% url 'biminis' %}">Biminis</a></li>
                 <li><a href="{% url 'accessories' %}">tower accessories</a></li>
@@ -126,7 +128,7 @@
                 <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="{% url 'contact' %}">Tech support</a></li>
             </ul>
-        </div>
+        </div> -->
 
         <div class="spacer-small"></div>
 
@@ -144,10 +146,10 @@
                                 <img src="{{ tower.first_image.image.url }}" alt="{{ tower.first_image.description }}" class="card-image">
                                 
                                 <h3 class="card-title">{{tower.title}}</h3>
-                                <p class="card-tag">{{ tower.description }}</p>
+                                <!-- <p class="card-tag">{{ tower.description }}</p> -->
                                 <div class="card-bottom">
                                     <p class="card-price">${{ tower.price | intcomma }}</p>
-                                    <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
+                                    <!-- <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a> -->
                                 </div>
                             </div>
                         

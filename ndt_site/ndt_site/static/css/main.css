@@ -859,16 +859,16 @@ article a:hover {
   overflow: hidden;
 }
 
-.jumbotron {
+.hero-top {
   background-color: #fff;
 }
 
-.jumbotron img {
-  width: 80%;
+.hero-top img {
+  width: 85%;
   height: auto;
 }
 
-.header-bg {
+/* .header-bg {
   position: absolute;
   background-image: url('/static/img/person-s-red-top-2723678.jpg');
   width: 100%;
@@ -878,6 +878,11 @@ article a:hover {
   background-repeat: no-repeat;
   opacity: .5;
   background-attachment: fixed;
+} */
+
+.boat-text {
+  font-size: 14px;
+  text-align: left;
 }
 
 .tower-title {
@@ -889,7 +894,6 @@ article a:hover {
 .selection .selected {
   margin-bottom: 2rem;
 }
-
 
 .jumbotron .col-md-6 p {
   text-align: justify;
@@ -925,9 +929,9 @@ article a:hover {
   content: "";
   width: 40px;
   height: 40px;
-  position: absolute;
+  position: relative;
   margin: auto;
-  top: 0;
+  top: -50;
   left: 0;
   right: 0;
   bottom: 0; 
@@ -1048,11 +1052,11 @@ article a:hover {
 /*****************NEW CARD *******************/
 .card {
   border: none;
-  width: 17rem;
+  width: 8rem;
   -webkit-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
   -moz-box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
   box-shadow: 1px 1px 7px 0px rgba(51,51,51,0.75);
-  margin: 20px;
+  margin: 5px;
 }
 
 .card:hover {
@@ -1071,7 +1075,7 @@ article a:hover {
 
 .card-title {
   display: block;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: bold;
   padding: 10px;
   text-align: left;
@@ -1089,14 +1093,13 @@ article a:hover {
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid #9B9FB5;
-  padding: 10px;
 }
 
 .card-price {
   display: inline;
   font-weight: bold;
   color: #D66706;
-  margin-right: 8.5rem;
+  padding-bottom: 5px;
 }
 
 .card-bottom .card-icon {
@@ -1215,6 +1218,15 @@ article a:hover {
 .review-card {
   background-color: #fff;
   padding: 20px;
+}
+
+.review-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.review-text {
+  font-size: 14px;
 }
 
 .rating {
@@ -1601,6 +1613,10 @@ article a:hover {
 @media screen and (min-width: 375px) {
   .acc-card {
     width: 15rem;
+  }
+
+  .card {
+    width: 10rem;
   }
 }
 
