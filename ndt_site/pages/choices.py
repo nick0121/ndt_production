@@ -70,3 +70,5 @@ CATEGORY = (
     ('board_rack', 'Board Racks'),
     ('accessory', 'Accessory'),
 )
+
+
