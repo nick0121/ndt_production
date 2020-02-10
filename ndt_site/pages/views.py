@@ -94,3 +94,8 @@ def sitemap(request):
 ############################################################# FAQ VIEWS ############################################
 def orders(request):
     return render(request, 'pages/orders.html')
+
+
+######################################################## product views #########################################
+def product(request):
+    return render(request, 'pages/product.html')

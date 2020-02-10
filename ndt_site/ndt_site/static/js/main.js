@@ -1,5 +1,7 @@
 (function($) { // Begin jQuery
     $(function() { // DOM ready
+
+
         //hides drop down when link is clicked
         $("nav li").click(function () {
           $('.nav-list').hide();
@@ -40,7 +42,6 @@
           $('.left-column img[data-image = ' + biminiColor + ']').addClass('active');
           $(this).addClass('.active');
         });
-
 
     }); // end DOM ready
   })(jQuery); // end jQuery

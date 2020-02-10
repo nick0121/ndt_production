@@ -2097,7 +2097,12 @@ article a:hover {
     margin-top: 0;
   }
 
-
+  #show {
+    display: block;
+    position: absolute;
+    top: 50px;
+    visibility: hidden;
+  }
 }
 
 /******************************RULES FOR SCREEN WIDTHS OF 1224 OR GREATER*********************************************/

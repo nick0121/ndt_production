@@ -7,6 +7,11 @@ from .forms import SearchForm
 def index(request):
 
 
+    # width = window.screen.width
+
+    # if width > 768:
+
+
     has_id = False
     
 
@@ -33,6 +38,7 @@ def index(request):
         'form': form,
         'main_img': main,
         'has_id': has_id,
+        # 'width': width,
         # 'ang_img': angled,
         # 'back_img': back,
         # 'coll_img': collapsed,
@@ -66,4 +72,3 @@ def tower(request, tower_id):
     }
 
     return render(request, 'towers/towers.html', context)
-
