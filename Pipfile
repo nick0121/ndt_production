@@ -17,6 +17,8 @@ sqlparse = "==0.3.0"
 Django = "==2.2.8"
 Pillow = "==6.2.1"
 django-phone-field = "*"
+django-storages = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.7"
