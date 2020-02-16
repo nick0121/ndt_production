@@ -78,9 +78,9 @@ class Products(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     weight = models.DecimalField(max_digits=7, decimal_places=2)
     description = models.TextField()
-    length = models.PositiveSmallIntegerField(max_digits="4")
-    width = models.PositiveSmallIntegerField(max_digits="4")
-    height = models.PositiveSmallIntegerField(max_digits="4")
+    length = models.PositiveSmallIntegerField()
+    width = models.PositiveSmallIntegerField()
+    height = models.PositiveSmallIntegerField()
     sale = models.BooleanField(default=False)
     sale_price = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True)
 
