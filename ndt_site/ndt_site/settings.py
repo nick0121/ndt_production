@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'ndt_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ndt_db',
-        'USER': 'postgres',
-        'PASSWORD': 'Amelia8627!',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -149,10 +149,10 @@ COUNTRIES_FIRST =  [
 
 
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
 
 ################# AWS ACCESS KEYS
 
